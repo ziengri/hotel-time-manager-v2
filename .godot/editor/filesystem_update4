@@ -1,0 +1,13 @@
+res://scenes/etc/title.tscn
+res://assets/themes/global.tres
+res://scenes/components/transition_button/transition_button.tscn
+res://tests/game/test_game_level.tscn
+res://scenes/components/file_content_display/file_content_display.tscn
+res://scenes/etc/cover_images_generator.tscn
+res://scenes/etc/credits.tscn
+res://scenes/etc/how_to_play.tscn
+res://scenes/etc/scene_background.tscn
+res://scenes/ui/dialog_background.tscn
+res://scenes/ui/game_over_dialog.tscn
+res://scenes/ui/hud.tscn
+res://tests/ui/hud_test.tscn
