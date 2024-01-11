@@ -23,6 +23,7 @@ VolumeSettingsMgr="*res://utils/volume_settings_mgr.gd"
 TransitionMgr="*res://utils/transition_mgr.tscn"
 ScreenshotMgr="*res://utils/screenshot_mgr.tscn"
 Stats="*res://scenes/player/Stats.gd"
+EventManager="*res://scenes/components/event_manager/event_manager.gd"
 
 [debug]
 

@@ -246,6 +246,7 @@ parameters/Idle/blend_position = Vector2(-0.0192, 0.0293159)
 parameters/Move/blend_position = Vector2(0.288, -0.62215)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -20.0
 offset_top = -36.0
 offset_right = 20.0

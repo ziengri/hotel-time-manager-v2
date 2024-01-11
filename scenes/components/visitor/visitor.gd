@@ -5,7 +5,7 @@ class_name VisitorCharacter
 @export var visitor_sprite : Texture2D
 
 var direction : Vector2
-
+var room :Room = null
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var world: World = get_tree().get_current_scene()
@@ -21,6 +21,7 @@ var direction : Vector2
 @export var event_count : int = 1
 #Закрепленная комната
 
+var path: Array[Vector2i]
 
 func _ready():
 	sprite.texture = visitor_sprite
@@ -30,7 +31,7 @@ func _ready():
 	animTree.active = true
 
 
-var path: Array
+
 
 func _physics_process(delta):
 	await get_tree().create_timer(1).timeout
@@ -64,6 +65,9 @@ func update_blend_position(input_vector):
 	animTree.set("parameters/Attack/blend_position",input_vector)
 	animTree.set("parameters/MoveHold/blend_position",input_vector)
 	direction = input_vector
+	
+func calculate_path(final_point:Vector2i)-> Array[Vector2i]:
+	return world.find_path(tile_map.local_to_map(position),tile_map.local_to_map(final_point))
 
 
 

@@ -6,7 +6,7 @@ class_name Spawner
 
 @export var visitor_scene :PackedScene
 
-var visitors_sprite_path:String = "res://textures/visitors/"
+var visitors_sprite_path:String = "res://assets/images/visitors/"
 @onready var texture_array :Array = DirAccess.open(visitors_sprite_path).get_files()
 # Called when the node enters the scene tree for the first time.
 func _ready()->void:
@@ -14,7 +14,7 @@ func _ready()->void:
 	spawn_visitor()
 	timer.timeout.connect(spawn_visitor)
 	#timer.wait_time = 10
-	timer.wait_time = randi_range(15,65)
+	timer.wait_time = randi_range(5,10)
 	timer.start()
 	
 func spawn_visitor()->void:

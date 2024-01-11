@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://uc5m1cummmup"]
+
+[ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_nlxia"]
+[ext_resource type="PackedScene" uid="uid://b4np8hkp20hbs" path="res://scenes/ui/star_ui.tscn" id="2_khlgv"]
+[ext_resource type="Texture2D" uid="uid://bfl85cnp5bdog" path="res://assets/images/ui/money_ui.png" id="3_4hd0g"]
+
+[node name="Game_HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nlxia")
+
+[node name="HFlowContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Stars" type="HBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="StarUi" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
+position = Vector2(4, 4)
+
+[node name="StarUi2" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
+position = Vector2(37, 4)
+
+[node name="StarUi3" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
+position = Vector2(69, 4)
+
+[node name="StarUi4" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
+position = Vector2(102, 4)
+
+[node name="StarUi5" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
+position = Vector2(134, 4)
+
+[node name="MarginContainer" type="MarginContainer" parent="HFlowContainer"]
+custom_minimum_size = Vector2(490, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="HFlowContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HFlowContainer/VBoxContainer/Panel"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 108.0
+offset_bottom = 30.0
+
+[node name="TextureRect" type="TextureRect" parent="HFlowContainer/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_4hd0g")
+stretch_mode = 3
+
+[node name="Money" type="Label" parent="HFlowContainer/VBoxContainer/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Деньги:"
+vertical_alignment = 1
+
+[node name="Events" type="VBoxContainer" parent="HFlowContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5hgit2hnndij"]
+
+[ext_resource type="Script" path="res://scenes/components/action_scene/action_scene.gd" id="1_vxmd5"]
+[ext_resource type="Script" path="res://scenes/action_scenes/reception_table/CheckQueue.gd" id="2_xwpw5"]
+
+[node name="ReceptionTableAction" type="CanvasLayer"]
+script = ExtResource("1_vxmd5")
+
+[node name="CheckQueue" type="Node2D" parent="."]
+script = ExtResource("2_xwpw5")

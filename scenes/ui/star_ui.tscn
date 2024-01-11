@@ -1,0 +1,145 @@
+[gd_scene load_steps=22 format=3 uid="uid://b4np8hkp20hbs"]
+
+[ext_resource type="Texture2D" uid="uid://ggjvbffw5anr" path="res://assets/images/ui/Stars.png" id="1_48stm"]
+[ext_resource type="Texture2D" uid="uid://dycdgarx10ekn" path="res://assets/images/ui/Star_out.png" id="1_fg8xg"]
+[ext_resource type="Texture2D" uid="uid://cbbujukcnx0pv" path="res://assets/images/ui/Star_came.png" id="2_4e1vy"]
+[ext_resource type="Script" path="res://scenes/ui/star_ui.gd" id="3_ss6cd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq14g"]
+atlas = ExtResource("1_fg8xg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqqc4"]
+atlas = ExtResource("1_fg8xg")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyffi"]
+atlas = ExtResource("1_fg8xg")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6fq5"]
+atlas = ExtResource("1_fg8xg")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71jg0"]
+atlas = ExtResource("1_fg8xg")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42f7x"]
+atlas = ExtResource("1_fg8xg")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dftmw"]
+atlas = ExtResource("2_4e1vy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlmaq"]
+atlas = ExtResource("2_4e1vy")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwylp"]
+atlas = ExtResource("2_4e1vy")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d1kc"]
+atlas = ExtResource("2_4e1vy")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84uai"]
+atlas = ExtResource("2_4e1vy")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kom3"]
+atlas = ExtResource("1_48stm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6865a"]
+atlas = ExtResource("1_48stm")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxput"]
+atlas = ExtResource("1_48stm")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn36m"]
+atlas = ExtResource("1_48stm")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdgb0"]
+atlas = ExtResource("1_48stm")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rjmv3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq14g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqqc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyffi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6fq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71jg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42f7x")
+}],
+"loop": false,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dftmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlmaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwylp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d1kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84uai")
+}],
+"loop": false,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kom3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6865a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxput")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn36m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdgb0")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}]
+
+[node name="StarUi" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_rjmv3")
+animation = &"1"
+offset = Vector2(8, 8)
+script = ExtResource("3_ss6cd")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

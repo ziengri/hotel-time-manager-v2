@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7wir6v0viwtk"]
+[gd_scene load_steps=4 format=3 uid="uid://b7wir6v0viwtk"]
 
 [ext_resource type="PackedScene" uid="uid://de3h10lhcnk3r" path="res://scenes/ui/pause_dialog.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://uc5m1cummmup" path="res://scenes/ui/game_hud.tscn" id="1_i1rc8"]
 [ext_resource type="PackedScene" uid="uid://1iaqbf7npwiv" path="res://scenes/ui/game_over_dialog.tscn" id="2"]
 
 [node name="Hud" type="CanvasLayer"]
 process_mode = 3
+
+[node name="Game_HUD" parent="." instance=ExtResource("1_i1rc8")]
+mouse_filter = 2
 
 [node name="Dialogs" type="Control" parent="."]
 layout_mode = 3

@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=3 uid="uid://ty7bvy7cdbb"]
+
+[ext_resource type="Theme" uid="uid://clwyv0qo8hlsk" path="res://assets/themes/new_theme.tres" id="1_k80ot"]
+[ext_resource type="Script" path="res://scenes/ui/event_card.gd" id="1_kyrkd"]
+[ext_resource type="StyleBox" uid="uid://0gledxmx6wwe" path="res://assets/themes/event_card_panek.tres" id="3_sbuuj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1ole"]
+
+[sub_resource type="Animation" id="Animation_f2bxd"]
+resource_name = "1"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_27ryu"]
+resource_name = "2"
+length = 1.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r0h07"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j4k35"]
+_data = {
+"1": SubResource("Animation_f2bxd"),
+"2": SubResource("Animation_27ryu"),
+"RESET": SubResource("Animation_r0h07")
+}
+
+[node name="EventCard" type="Panel"]
+custom_minimum_size = Vector2(100, 27)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_k80ot")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p1ole")
+script = ExtResource("1_kyrkd")
+
+[node name="TextureRect" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_sbuuj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -9.0
+offset_right = 34.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="EventAlias" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.796078, 0.698039, 1)
+theme_override_font_sizes/font_size = 6
+text = "Уборка в номере"
+horizontal_alignment = 1
+
+[node name="RoomNumber" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.466667, 0.247059, 0.168627, 1)
+theme_override_font_sizes/font_size = 6
+text = "001"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(90, 6)
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+max_value = 60.0
+value = 20.0
+show_percentage = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j4k35")
+}
