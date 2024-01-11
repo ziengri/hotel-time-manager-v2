@@ -18,6 +18,7 @@ func find_path(_start_cell: Vector2i, _end_cell: Vector2i) -> Array[Vector2i]:
 
 func init_AstarGrid() -> void:
 	AStarGrid.size = Vector2i(100,100)
+	AStarGrid.region = Rect2i(-1, -1, 100, 100)
 	AStarGrid.cell_size = Vector2i(16,16)
 	AStarGrid.update()
 	
