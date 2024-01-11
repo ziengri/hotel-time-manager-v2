@@ -15,6 +15,8 @@ func _ready()->void:
 	texture_rect.modulate.a = 0
 	event_alias.text = (event_info['event_info'] as EventInfo).description
 	room_number.text = "Комната: " + str(room_id)
+	print(event_info['timer'].wait_time)
+	if (event_info['event_info'] as EventInfo).time_to_event == 0 : progress_bar.visible = false
 	progress_bar.max_value = int(event_info['timer'].wait_time)
 
 	create_tween()

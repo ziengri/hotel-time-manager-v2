@@ -15,6 +15,7 @@ func _ready():
 	for i in range(0,ITEMS_COUNT):
 		spawn_item()
 
+
 func spawn_item()->void:
 	var trash_scenes : Array = DirAccess.open("res://scenes/action_scenes/RoomCleaning/trash/").get_files()
 	
@@ -39,9 +40,16 @@ func on_item_clear()->void:
 
 func finish_game():
 	hint.text= "Готово"
-	await get_tree().create_timer(0.4).timeout
+	await get_tree().create_timer(0.3).timeout
+	var room_number :int = int(((get_parent().get_parent() as EventSource).event_key).split("_")[2])
+	for room in get_tree().get_nodes_in_group("rooms"):
+		print((room as Room).room_number)
+		print(room_number)	
+		if (room as Room).room_number == room_number:
+	
+			(room as Room).status = Room.RoomStatus.FREE
 	clean_room.stop()
-	get_parent()._finish
+	get_parent()._finish()
 
 
 func _process(delta):

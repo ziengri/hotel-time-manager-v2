@@ -14,7 +14,7 @@ func _ready()->void:
 	spawn_visitor()
 	timer.timeout.connect(spawn_visitor)
 	#timer.wait_time = 10
-	timer.wait_time = randi_range(5,10)
+	timer.wait_time = randi_range(1,1)
 	timer.start()
 	
 func spawn_visitor()->void:

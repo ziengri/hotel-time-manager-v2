@@ -19,6 +19,8 @@ func _ready():
 	point = randi_range(-4,1.2)
 	range = point + range
 	timer.timeout.connect(check)
+
+	
 	
 var wait: bool = false
 var point: float

@@ -16,6 +16,7 @@ func _ready():
 	background.set_anchors_preset(Control.PRESET_FULL_RECT)
 	background.set_color(Color(0,0,0,0.4))
 	background.z_index = -1
+	background.mouse_filter =Control.MOUSE_FILTER_IGNORE
 	add_child(background)
 	get_child(0).global_position.x+= 100
 	get_child(0).global_position.y+= 50
