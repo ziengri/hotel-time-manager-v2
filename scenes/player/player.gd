@@ -54,6 +54,8 @@ func update_blend_position(input_vector):
 	animTree.set("parameters/Attack/blend_position",input_vector)
 	animTree.set("parameters/MoveHold/blend_position",input_vector)
 	direction = input_vector
+	use_area.look_at(use_area.global_position+(input_vector))
+
 
 
 

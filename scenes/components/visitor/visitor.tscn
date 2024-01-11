@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bbmrknjfw4d1w"]
+[gd_scene load_steps=35 format=3 uid="uid://bbmrknjfw4d1w"]
 
 [ext_resource type="Script" path="res://scenes/components/visitor/visitor.gd" id="1_ek0k3"]
 [ext_resource type="Texture2D" uid="uid://bjtljh65pn1qa" path="res://assets/images/visitors/visitor2.png" id="2_ixnuk"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://scenes/components/visitor/idle_vizitor.gd" id="4_coxsr"]
 [ext_resource type="Script" path="res://scenes/components/visitor/queue.gd" id="5_hdlwd"]
 [ext_resource type="Script" path="res://scenes/components/visitor/walk_vizitor.gd" id="6_dt2le"]
-[ext_resource type="PackedScene" uid="uid://beoexruwllm17" path="res://scenes/components/interact_area/InteractArea.tscn" id="6_x4pk8"]
 [ext_resource type="Script" path="res://scenes/components/visitor/wait_vizitor.gd" id="7_5dloy"]
 [ext_resource type="Script" path="res://scenes/components/visitor/idle_event_vizitor.gd" id="8_c02dh"]
 [ext_resource type="Theme" uid="uid://cg33m0umsdbg0" path="res://assets/themes/global.tres" id="11_msna6"]
@@ -28,30 +27,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("InteractArea:monitoring")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(-0.1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("InteractArea:monitorable")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(-0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_uflb4"]
@@ -90,30 +65,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_xstr6"]
 resource_name = "monitor_off"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("InteractArea:monitoring")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("InteractArea:monitorable")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_more4"]
 resource_name = "move_down"
@@ -258,9 +209,6 @@ states/Start/position = Vector2(666, 12)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_6860n"), "Move", "Idle", SubResource("AnimationNodeStateMachineTransition_b1sov"), "Idle", "Move", SubResource("AnimationNodeStateMachineTransition_hsst4")]
 graph_offset = Vector2(471.212, 252.952)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3tun"]
-size = Vector2(10, 31.9999)
-
 [node name="Visitor" type="CharacterBody2D"]
 process_mode = 1
 process_priority = 1
@@ -305,12 +253,6 @@ offset_right = 20.0
 offset_bottom = -13.0
 theme_override_fonts/font = ExtResource("3_0hmil")
 
-[node name="ItemHold" type="Sprite2D" parent="."]
-position = Vector2(0, -8)
-hframes = 16
-vframes = 4
-frame = 7
-
 [node name="States" type="Node" parent="."]
 process_mode = 1
 script = ExtResource("3_12nor")
@@ -341,14 +283,6 @@ script = ExtResource("8_c02dh")
 process_mode = 1
 one_shot = true
 
-[node name="InteractArea" parent="." instance=ExtResource("6_x4pk8")]
-position = Vector2(0, -7)
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
-position = Vector2(0, 9.00007)
-shape = SubResource("RectangleShape2D_q3tun")
-
 [node name="Dissatisfaction" type="ProgressBar" parent="."]
 visible = false
 offset_left = -14.0
@@ -359,4 +293,3 @@ scale = Vector2(0.2, 0.2)
 theme = ExtResource("11_msna6")
 
 [connection signal="timeout" from="States/Wait/Timer" to="States/Wait" method="_on_timer_timeout"]
-[connection signal="interacted" from="InteractArea" to="States/Wait" method="_on_interact_area_interacted"]

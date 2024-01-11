@@ -20,13 +20,6 @@ var direction : Vector2
 #Кол-во эвеннтов
 @export var event_count : int = 1
 #Закрепленная комната
-@export var room : Room : set = _set_room
-
-func _set_room(new_room):
-	print(new_room)
-	print(room)
-	room = new_room
-	print(room)
 
 
 func _ready():
@@ -35,6 +28,7 @@ func _ready():
 	
 	states.init(self)
 	animTree.active = true
+
 
 var path: Array
 
@@ -48,17 +42,18 @@ func _physics_process(delta):
 		animState.travel("Idle")
 		return
 	
+	animate()
+	move()
+
+
+func animate():
 	var anim_vector = position.direction_to(  tile_map.map_to_local(path[0])  )
 	update_blend_position(anim_vector)
 	animState.travel("Move")
-	
-	move()
-
 
 func move():
 	position = position.move_toward(tile_map.map_to_local(path[0]),1.5)
 	
-	#tile_map.set_cell(0,path[0],1,Vector2i(1,1))
 	if position == tile_map.map_to_local(path[0]):
 		path.remove_at(0)
 

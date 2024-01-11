@@ -1,7 +1,16 @@
 res://scenes/world/world.tscn
 res://assets/themes/global.tres
+res://scenes/components/state_machine/visitor/base_state_visitor.gd
 res://scenes/player/player.tscn
+res://scenes/components/state_machine/base_state.gd
+res://scenes/components/state_machine/player/base_state_player.gd
+res://scenes/components/state_machine/visitor/base_state_vizitor.gd
+res://scenes/components/state_machine/visitor/states_manager_vizitor.gd
+res://scenes/components/state_machine/states_manager.gd
+res://scenes/components/visitor/visitor.tscn
+res://scenes/components/visitor/visitor.gd
 res://tests/action_test.tscn
 res://scenes/action_scenes/TVRepair/game.tscn
 res://scenes/action_scenes/TVRepair/TVReapair.tscn
-res://scenes/world/world.gd
+res://scenes/components/state_machine/base_state.tscn
+res://scenes/player/player.gd

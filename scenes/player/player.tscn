@@ -201,8 +201,8 @@ states/Start/position = Vector2(666, 12)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_6860n"), "Move", "Idle", SubResource("AnimationNodeStateMachineTransition_b1sov"), "Idle", "Move", SubResource("AnimationNodeStateMachineTransition_hsst4")]
 graph_offset = Vector2(471.212, 252.952)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lr7hk"]
-radius = 11.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6rdd"]
+size = Vector2(10.9529, 14)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 collision_mask = 3
@@ -237,7 +237,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_qv45g")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.0192, 0.0293159)
-parameters/Move/blend_position = Vector2(-0.5088, -0.367816)
+parameters/Move/blend_position = Vector2(0.0080142, 0.718062)
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -263,12 +263,11 @@ script = ExtResource("4_oxyia")
 script = ExtResource("5_3o7n7")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(0, -8)
-rotation = 3.14159
+position = Vector2(0, -5)
 collision_layer = 0
 collision_mask = 4
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.74846e-07, 2)
-shape = SubResource("CircleShape2D_lr7hk")
+position = Vector2(5.52355, -4.17233e-07)
+shape = SubResource("RectangleShape2D_g6rdd")
