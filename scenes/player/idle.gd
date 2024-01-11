@@ -7,12 +7,10 @@ func enter()->void:
 
 
 func input(event: InputEvent) -> int:
-	if just_move_pressed():
-		return State.WALK
+	if get_input_vector() != Vector2.ZERO: return State.WALK
 	return State.NULL
 
 
 func physics_procces(delta: float)->int:
-	if move_pressed():
-		return State.WALK
+	if get_input_vector() != Vector2.ZERO: return State.WALK
 	return State.NULL
