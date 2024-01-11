@@ -4815,16 +4815,30 @@ layer_1/tile_data = PackedInt32Array(458751, 524289, 22, 1441791, 327681, 22, 20
 
 [node name="Hud" parent="." instance=ExtResource("11_w2i7n")]
 
-[node name="EventSource" type="Area2D" parent="."]
+[node name="TvReapir" type="Area2D" parent="."]
 position = Vector2(477, 225)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 script = ExtResource("9_274yw")
-event_key = "need_food"
+event_key = "tv_repair"
 action_scene_path = ExtResource("10_3c6cc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TvReapir"]
+position = Vector2(-152, 235)
+shape = SubResource("CircleShape2D_xw41g")
+debug_color = Color(0.909804, 0, 0.729412, 0.419608)
+
+[node name="TvReapir2" type="Area2D" parent="."]
+position = Vector2(193, 233)
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("9_274yw")
+event_key = "tv_repair"
+action_scene_path = ExtResource("10_3c6cc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TvReapir2"]
 position = Vector2(-152, 235)
 shape = SubResource("CircleShape2D_xw41g")
 debug_color = Color(0.909804, 0, 0.729412, 0.419608)
@@ -4839,6 +4853,17 @@ room_number = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room"]
 position = Vector2(-6.5, 5)
+shape = SubResource("RectangleShape2D_nth2o")
+
+[node name="Room2" type="Area2D" parent="."]
+position = Vector2(71, 428)
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+script = ExtResource("11_7aspo")
+room_number = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2"]
 shape = SubResource("RectangleShape2D_nth2o")
 
 [node name="Queue" type="Node" parent="."]
@@ -4861,5 +4886,5 @@ position = Vector2(613, 245)
 
 [node name="Spawner" parent="." instance=ExtResource("14_w8ro4")]
 position = Vector2(170, 71)
-visitors_count = 2
+visitors_count = 4
 visitor_scene = ExtResource("13_hmuy5")
