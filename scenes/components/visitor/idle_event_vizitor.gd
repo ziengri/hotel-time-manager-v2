@@ -14,7 +14,7 @@ func start_event()->void:
 		print_debug("Возможно перенести выше в посетителя")
 		player.room.status = Room.RoomStatus.DIRTY
 		player.room = null
-		player.path = player.world.find_path(player.tile_map.local_to_map(  player.position  ) , Vector2i.ONE  )
+		player.path = player.world.find_path(player.tile_map.local_to_map(  player.position  ) , Vector2i(90,0)  )
 		get_parent().change_state(BaseStateVisitor.State.WALK)
 	else:
 		player.event_count -=1
