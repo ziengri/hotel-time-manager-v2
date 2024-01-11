@@ -1,1 +1,13 @@
+res://scenes/action_scenes/TVRepair
+res://scenes/components/event_manager
+res://scenes/world
+res://scenes/player
+res://assets/images/tilesets
+res://scenes/components/interact_area
+res://assets/themes
+res://assets/images/visitors
+res://assets/fonts
+res://scenes/components/visitor
+res://assets/images/player
+res://scenes/components/state_machine/player
 res://tests/game
