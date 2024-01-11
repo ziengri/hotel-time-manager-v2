@@ -1,9 +1,14 @@
 res://scenes/world/world.tscn
+res://assets/themes/new_theme.tres
 res://assets/themes/global.tres
-res://scenes/player/player.gd
 res://scenes/player/player.tscn
 res://tests/action_test.tscn
 res://scenes/action_scenes/TVRepair/game.tscn
 res://scenes/action_scenes/TVRepair/TVReapair.tscn
 res://scenes/components/state_machine/base_state.tscn
 res://scenes/components/visitor/visitor.tscn
+res://assets/themes/new_style_box_texture.tres
+res://scenes/ui/event_card.tscn
+res://scenes/ui/game_hud.tscn
+res://scenes/ui/event_card.gd
+res://scenes/components/visitor/idle_event_vizitor.gd

@@ -1,4 +1,6 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://clwyv0qo8hlsk"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://clwyv0qo8hlsk"]
+
+[ext_resource type="Texture2D" uid="uid://c75rr4mvk8xab" path="res://assets/images/ui/bars free.png" id="1_1i455"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_giw7l"]
 texture_margin_left = 4.0
@@ -22,6 +24,7 @@ texture_margin_bottom = 4.0
 region_rect = Rect2(50.567, 36, 42, 27)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1dr8"]
+texture = ExtResource("1_1i455")
 texture_margin_left = 1.0
 texture_margin_top = 1.0
 texture_margin_right = 1.0
@@ -29,6 +32,7 @@ texture_margin_bottom = 1.0
 region_rect = Rect2(0, 4, 48, 7)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_smg3a"]
+texture = ExtResource("1_1i455")
 texture_margin_left = 1.0
 texture_margin_top = 1.0
 texture_margin_right = 1.0

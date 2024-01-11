@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://scenes/components/visitor/walk_vizitor.gd" id="6_dt2le"]
 [ext_resource type="Script" path="res://scenes/components/visitor/wait_vizitor.gd" id="7_5dloy"]
 [ext_resource type="Script" path="res://scenes/components/visitor/idle_event_vizitor.gd" id="8_c02dh"]
-[ext_resource type="Theme" uid="uid://cg33m0umsdbg0" path="res://assets/themes/global.tres" id="11_msna6"]
+[ext_resource type="Theme" uid="uid://clwyv0qo8hlsk" path="res://assets/themes/new_theme.tres" id="10_bqsub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxs5x"]
 size = Vector2(7, 7.5)
@@ -289,6 +289,6 @@ offset_top = -30.0
 offset_right = 131.0
 offset_bottom = -3.0
 scale = Vector2(0.2, 0.2)
-theme = ExtResource("11_msna6")
+theme = ExtResource("10_bqsub")
 
 [connection signal="timeout" from="States/Wait/Timer" to="States/Wait" method="_on_timer_timeout"]

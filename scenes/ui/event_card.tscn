@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ty7bvy7cdbb"]
+[gd_scene load_steps=8 format=3 uid="uid://ty7bvy7cdbb"]
 
 [ext_resource type="Theme" uid="uid://clwyv0qo8hlsk" path="res://assets/themes/new_theme.tres" id="1_k80ot"]
 [ext_resource type="Script" path="res://scenes/ui/event_card.gd" id="1_kyrkd"]
-[ext_resource type="StyleBox" uid="uid://0gledxmx6wwe" path="res://assets/themes/event_card_panek.tres" id="3_sbuuj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1ole"]
+[ext_resource type="StyleBox" uid="uid://bl4jyj0uki244" path="res://assets/themes/new_style_box_texture.tres" id="3_xp542"]
 
 [sub_resource type="Animation" id="Animation_f2bxd"]
 resource_name = "1"
@@ -20,6 +18,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_27ryu"]
@@ -66,6 +76,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j4k35"]
 _data = {
@@ -75,6 +97,7 @@ _data = {
 }
 
 [node name="EventCard" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(100, 27)
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,7 +107,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_k80ot")
-theme_override_styles/panel = SubResource("StyleBoxEmpty_p1ole")
 script = ExtResource("1_kyrkd")
 
 [node name="TextureRect" type="Panel" parent="."]
@@ -94,7 +116,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = ExtResource("3_sbuuj")
+theme_override_styles/panel = ExtResource("3_xp542")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
 layout_mode = 1
@@ -109,7 +131,7 @@ offset_right = 34.0
 offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = -1
 alignment = 1
 
 [node name="EventAlias" type="Label" parent="TextureRect/VBoxContainer"]

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704996720
+::res://::1705002205
 default_bus_layout.tres::AudioBusLayout::-1::1704982489::0::1::::<><>::
 default_env.tres::Environment::-1::1704982489::0::1::::<><>::
 icon.png::CompressedTexture2D::1912445624130052668::1704982489::1704982489::1::::<><>::
@@ -19,8 +19,10 @@ Character_sprite_0.png::CompressedTexture2D::2410990347672895801::1704982489::17
 Character_sprite_1.png::CompressedTexture2D::7411203573845424522::1704982489::1704982489::1::::<><>::
 Character_sprite_2.png::CompressedTexture2D::7486728094196007908::1704982489::1704982489::1::::<><>::
 Character_sprite_3.png::CompressedTexture2D::345295620241745688::1704982489::1704982489::1::::<><>::
-::res://assets/images/tilesets/::1704982489
+::res://assets/images/tilesets/::1705002194
 furniture spritesheet.png::CompressedTexture2D::2853682088082546247::1704982489::1704982489::1::::<><>::
+::res://assets/images/tilesets/objects/::1705002194
+table.png::CompressedTexture2D::5016504900877838143::1705002194::1705002212::1::::<><>::
 ::res://assets/images/tilesets/world/::1704982489
 Bonus_16x16.png::CompressedTexture2D::533918263564535760::1704982489::1704982489::1::::<><>::
 Borders_16x16.png::CompressedTexture2D::8177475150540750423::1704982489::1704982489::1::::<><>::
@@ -122,11 +124,22 @@ Item_singles_83.png::CompressedTexture2D::4817916547588852739::1704982489::17049
 Item_singles_84.png::CompressedTexture2D::220084359742914493::1704982489::1704982489::1::::<><>::
 Item_singles_85.png::CompressedTexture2D::1445357154068783571::1704982489::1704982489::1::::<><>::
 Item_singles_86.png::CompressedTexture2D::2715427813580777795::1704982489::1704982489::1::::<><>::
-::res://assets/images/ui/::1704982489
+::res://assets/images/ui/::1705002194
+bars free.png::CompressedTexture2D::7081879786482082853::1705002194::1705002212::1::::<><>::
+base free.png::CompressedTexture2D::7120934572908203044::1705002194::1705002212::1::::<><>::
+buttons free.png::CompressedTexture2D::8452747172751272260::1705002194::1705002212::1::::<><>::
+gui_free.png::CompressedTexture2D::6029512199715087337::1705002194::1705002212::1::::<><>::
+icons free.png::CompressedTexture2D::6217576541770108607::1705002194::1705002212::1::::<><>::
+money_ui.png::CompressedTexture2D::2762130417607183094::1705002194::1705002212::1::::<><>::
+scrollbars free.png::CompressedTexture2D::6665289812747729737::1705002194::1705002212::1::::<><>::
 settings_left.png::CompressedTexture2D::1799181366756429885::1704982489::1704982489::1::::<><>::
 settings_left_small.png::CompressedTexture2D::8864769845786276740::1704982489::1704982489::1::::<><>::
 settings_right.png::CompressedTexture2D::4133315418906168625::1704982489::1704982489::1::::<><>::
 settings_right_small.png::CompressedTexture2D::5035706553480306687::1704982489::1704982489::1::::<><>::
+Stars.png::CompressedTexture2D::434103343464582267::1705002194::1705002212::1::::<><>::
+Star_came.png::CompressedTexture2D::4846326066802991295::1705002194::1705002212::1::::<><>::
+Star_null.png::CompressedTexture2D::1392718140032454004::1705002194::1705002212::1::::<><>::
+Star_out.png::CompressedTexture2D::8848115946984350841::1705002194::1705002212::1::::<><>::
 ::res://assets/images/ui/input_prompts/::1704982489
 ::res://assets/images/ui/input_prompts/xelu_free_keyboardcontroller_prompts_pack/::1704982489
 Readme.txt::TextFile::-1::1704982489::0::1::::<><>::
@@ -867,11 +880,17 @@ white_square_64x64.png::CompressedTexture2D::3153394993205990346::1704982489::17
 ::res://assets/sounds/::1704982489
 ::res://assets/sounds/volume_settings_ui/::1704982489
 bong_001.ogg::AudioStreamOggVorbis::8730247144312329234::1704982489::1704982489::1::::<><>::
-::res://assets/themes/::1704994614
+::res://assets/themes/::1705002194
+event_card_panek.tres::StyleBoxTexture::1767782581248976368::1705002194::0::1::::<><>::uid://oyw5wqet167c::::res://theme/Tiny Wonder UI Free/buttons free.png
 global.tres::Theme::5253499856201630241::1704994614::0::1::::<><>::res://assets/fonts/text.tres<>res://assets/fonts/buttons.tres
 invalid_action_binding.tres::Theme::-1::1704982489::0::1::::<><>::
-::res://scenes/::1704982489
-::res://scenes/action_scenes/::1704982489
+new_style_box_texture.tres::StyleBoxTexture::3218954742820486659::1705002194::0::1::::<><>::uid://oyw5wqet167c::::res://theme/Tiny Wonder UI Free/buttons free.png
+new_theme.tres::Theme::5591831005973379106::1705002194::0::1::::<><>::
+::res://scenes/::1705002194
+::res://scenes/action_scenes/::1705002194
+::res://scenes/action_scenes/reception_table/::1705002194
+CheckQueue.gd::GDScript::-1::1705002194::0::1::::<>Node2D<>::
+reception_table_action.tscn::PackedScene::6893336949102737021::1705002194::0::1::::<><>::res://scenes/components/action_scene/action_scene.gd<>res://scenes/action_scenes/reception_table/CheckQueue.gd
 ::res://scenes/action_scenes/TVRepair/::1704994615
 game.gd::GDScript::-1::1704990898::0::1::::<>Node2D<>::
 game.tscn::PackedScene::6414035178499484846::1704994615::0::1::::<><>::res://scenes/action_scenes/TVRepair/game.gd<>uid://bi2lpgr5ro8n8::::res://scenes/action_scenes/TVRepair/resources/television_room.png<>uid://dhfgm7gi05oqs::::res://scenes/action_scenes/TVRepair/resources/television.png<>uid://ct76svdo0eu62::::res://scenes/action_scenes/TVRepair/resources/television_panel_button.png<>uid://cyy6d6y086gnx::::res://scenes/action_scenes/TVRepair/resources/television_button.png<>uid://qvlsn4v5xis8::::res://scenes/action_scenes/TVRepair/resources/white_noise1.png<>uid://drbvvv1d0yojm::::res://scenes/action_scenes/TVRepair/resources/white_noise2.png
@@ -885,21 +904,25 @@ television_room.png::CompressedTexture2D::3004364648774123871::1704982489::17049
 TV football.mp3::AudioStreamMP3::8289645267685184394::1704982489::1704982489::1::::<><>::
 white_noise1.png::CompressedTexture2D::1167074190852520477::1704982489::1704982489::1::::<><>::
 white_noise2.png::CompressedTexture2D::8355850472525954342::1704982489::1704982489::1::::<><>::
-::res://scenes/components/::1704982489
+::res://scenes/components/::1705002194
 ::res://scenes/components/action_scene/::1704982489
 action_scene.gd::GDScript::-1::1704982489::0::1::::ActionScene<>CanvasLayer<>::
-::res://scenes/components/event_manager/::1704982489
-event_manager.gd::GDScript::-1::1704982489::0::1::::<>Node<>::
+::res://scenes/components/event_manager/::1705002194
+event_manager.gd::GDScript::-1::1705002194::0::1::::<>Node<>::
 event_resource.gd::GDScript::-1::1704982489::0::1::::EventInfo<>Resource<>::
-new_resource.tres::Resource/Resource::5182560016986144387::1704982489::0::1::::<><>::res://scenes/components/event_manager/event_resource.gd
-::res://scenes/components/event_source/::1704982489
-event_source.gd::GDScript::-1::1704982489::0::1::::EventSource<>Area2D<>::
+::res://scenes/components/event_manager/events/::1705002194
+::res://scenes/components/event_manager/events/room_events/::1705002194
+need_food.tres::Resource/EventInfo::6082861210524326196::1705002194::0::1::::<><>::res://scenes/components/event_manager/event_resource.gd
+::res://scenes/components/event_source/::1705002194
+event_source.gd::GDScript::-1::1705002194::0::1::::EventSource<>Area2D<>::
 ::res://scenes/components/file_content_display/::1704982489
 file_content_display.gd::GDScript::-1::1704982489::0::1::::<>TextEdit<>::
 file_content_display.tscn::PackedScene::2685878192855205205::1704982489::0::1::::<><>::res://scenes/components/file_content_display/file_content_display.gd
 ::res://scenes/components/interact_area/::1704982489
 InteractArea.gd::GDScript::-1::1704982489::0::1::::InteractArea<>Area2D<>::
 InteractArea.tscn::PackedScene::2696362212840712844::1704982489::0::1::::<><>::res://scenes/components/interact_area/InteractArea.gd
+::res://scenes/components/room/::1705002194
+room.gd::GDScript::-1::1705002194::0::1::::Room<>Area2D<>::
 ::res://scenes/components/state_machine/::1704994615
 base_state.gd::GDScript::-1::1704988062::0::1::::BaseState<>Node<>::
 base_state.tscn::PackedScene::7078665952104561709::1704994615::0::1::::<><>::res://scenes/components/state_machine/base_state.gd
@@ -912,14 +935,14 @@ states_manager_vizitor.gd::GDScript::-1::1704988054::0::1::::StateMachineVizitor
 ::res://scenes/components/transition_button/::1704982489
 transition_button.gd::GDScript::-1::1704982489::0::1::::TransitionButton<>Button<>::
 transition_button.tscn::PackedScene::3695403897593023590::1704982489::0::1::::<><>::res://scenes/components/transition_button/transition_button.gd
-::res://scenes/components/visitor/::1704994615
-idle_event_vizitor.gd::GDScript::-1::1704982489::0::1::::<>BaseStateVisitor<>::
+::res://scenes/components/visitor/::1705002194
+idle_event_vizitor.gd::GDScript::-1::1705002194::0::1::::<>BaseStateVisitor<>::
 idle_vizitor.gd::GDScript::-1::1704982489::0::1::::<>BaseStateVisitor<>::
-queue.gd::GDScript::-1::1704982489::0::1::::<>BaseStateVisitor<>::
+queue.gd::GDScript::-1::1705002194::0::1::::<>BaseStateVisitor<>::
 states_visitor.gd::GDScript::-1::1704982489::0::1::::<>StateMachineVizitor<>::
-visitor.gd::GDScript::-1::1704988160::0::1::::VisitorCharacter<>CharacterBody2D<>::
-visitor.tscn::PackedScene::2482432804160441918::1704994615::0::1::::<><>::res://scenes/components/visitor/visitor.gd<>uid://bjtljh65pn1qa::::res://assets/images/visitors/visitor2.png<>uid://0pb2pxp4hx33::::res://assets/fonts/Jellee-Roman.otf<>res://scenes/components/visitor/states_visitor.gd<>res://scenes/components/visitor/idle_vizitor.gd<>res://scenes/components/visitor/queue.gd<>res://scenes/components/visitor/walk_vizitor.gd<>res://scenes/components/visitor/wait_vizitor.gd<>res://scenes/components/visitor/idle_event_vizitor.gd<>uid://cg33m0umsdbg0::::res://assets/themes/global.tres
-wait_vizitor.gd::GDScript::-1::1704982489::0::1::::<>BaseStateVisitor<>::
+visitor.gd::GDScript::-1::1705002194::0::1::::VisitorCharacter<>CharacterBody2D<>::
+visitor.tscn::PackedScene::2482432804160441918::1705002194::0::1::::<><>::res://scenes/components/visitor/visitor.gd<>uid://bjtljh65pn1qa::::res://assets/images/visitors/visitor2.png<>uid://0pb2pxp4hx33::::res://assets/fonts/Jellee-Roman.otf<>res://scenes/components/visitor/states_visitor.gd<>res://scenes/components/visitor/idle_vizitor.gd<>res://scenes/components/visitor/queue.gd<>res://scenes/components/visitor/walk_vizitor.gd<>res://scenes/components/visitor/wait_vizitor.gd<>res://scenes/components/visitor/idle_event_vizitor.gd<>uid://cg33m0umsdbg0::::res://assets/themes/global.tres
+wait_vizitor.gd::GDScript::-1::1705002194::0::1::::<>BaseStateVisitor<>::
 walk_vizitor.gd::GDScript::-1::1704982489::0::1::::<>BaseStateVisitor<>::
 ::res://scenes/etc/::1704989710
 cover_images_generator.gd::GDScript::-1::1704982489::0::1::::<>Control<>::
@@ -932,23 +955,32 @@ settings.tscn::PackedScene::7224225886632202219::1704982489::0::1::::<><>::uid:/
 settings_ok_btn.gd::GDScript::-1::1704982489::0::1::::<>TransitionButton<>::
 title.gd::GDScript::-1::1704982489::0::1::::<>Control<>::
 title.tscn::PackedScene::8034109291668548001::1704982489::0::1::::<><>::uid://b20uyj2a7snys::::res://scenes/etc/scene_background.tscn<>res://scenes/etc/title.gd<>uid://bswc06g8au3yg::::res://scenes/components/transition_button/transition_button.tscn<>uid://cg33m0umsdbg0::::res://assets/themes/global.tres
-::res://scenes/player/::1704994695
+::res://scenes/interactive_objects/::1705002194
+::res://scenes/interactive_objects/reception_table/::1705002194
+reception_table.tscn::PackedScene::2634013781882349999::1705002194::0::1::::<><>::uid://cdqbdq3lhvffj::::res://assets/images/tilesets/objects/table.png<>res://scenes/components/event_source/event_source.gd<>uid://c5hgit2hnndij::::res://scenes/action_scenes/reception_table/reception_table_action.tscn
+::res://scenes/player/::1705002194
 idle.gd::GDScript::-1::1704982489::0::1::::<>BaseState<>::
 image.png::CompressedTexture2D::8214874069622837409::1704982489::1704982489::1::::<><>::
 player.gd::GDScript::-1::1704994695::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::7662970751870351088::1704994695::0::1::::<><>::res://scenes/player/player.gd<>uid://bal5wnssgi4sb::::res://assets/images/player/Character_sprite_0.png<>uid://0pb2pxp4hx33::::res://assets/fonts/Jellee-Roman.otf<>res://scenes/player/player_states.gd<>res://scenes/player/idle.gd<>res://scenes/player/walk.gd
+player.tscn::PackedScene::7662970751870351088::1705002194::0::1::::<><>::res://scenes/player/player.gd<>uid://bal5wnssgi4sb::::res://assets/images/player/Character_sprite_0.png<>uid://0pb2pxp4hx33::::res://assets/fonts/Jellee-Roman.otf<>res://scenes/player/player_states.gd<>res://scenes/player/idle.gd<>res://scenes/player/walk.gd
 player_states.gd::GDScript::-1::1704982489::0::1::::<>StateMachine<>::
 Stats.gd::GDScript::-1::1704982489::0::1::::<>Node<>::
 walk.gd::GDScript::-1::1704982489::0::1::::<>BaseState<>::
-::res://scenes/ui/::1704989710
+::res://scenes/ui/::1705002195
 dialog_background.tscn::PackedScene::8575668014100851851::1704989710::0::1::::<><>::uid://bk6r7p1kd5oja::::res://assets/images/visitors/white_square_64x64.png
+event_card.gd::GDScript::-1::1705002194::0::1::::EventCard<>Panel<>::
+event_card.tscn::PackedScene::40737616656025471::1705002194::0::1::::<><>::uid://clwyv0qo8hlsk::::res://assets/themes/new_theme.tres<>res://scenes/ui/event_card.gd<>uid://0gledxmx6wwe::::res://assets/themes/event_card_panek.tres
+game_hud.gd::GDScript::-1::1705002195::0::1::::<>Control<>::
+game_hud.tscn::PackedScene::1409749937200563207::1705002195::0::1::::<><>::res://scenes/ui/game_hud.gd<>uid://b4np8hkp20hbs::::res://scenes/ui/star_ui.tscn<>uid://bfl85cnp5bdog::::res://assets/images/ui/money_ui.png
 game_over_dialog.gd::GDScript::-1::1704982489::0::1::::<>Control<>::
 game_over_dialog.tscn::PackedScene::1841453591043091973::1704982489::0::1::::<><>::uid://bswc06g8au3yg::::res://scenes/components/transition_button/transition_button.tscn<>uid://dugd88fmowfix::::res://scenes/ui/dialog_background.tscn<>res://scenes/ui/game_over_dialog.gd<>uid://cg33m0umsdbg0::::res://assets/themes/global.tres
-hud.tscn::PackedScene::4678397746967003736::1704982489::0::1::::<><>::uid://de3h10lhcnk3r::::res://scenes/ui/pause_dialog.tscn<>uid://1iaqbf7npwiv::::res://scenes/ui/game_over_dialog.tscn
+hud.tscn::PackedScene::4678397746967003736::1705002195::0::1::::<><>::uid://de3h10lhcnk3r::::res://scenes/ui/pause_dialog.tscn<>uid://uc5m1cummmup::::res://scenes/ui/game_hud.tscn<>uid://1iaqbf7npwiv::::res://scenes/ui/game_over_dialog.tscn
 pause_dialog.gd::GDScript::-1::1704982489::0::1::::<>Control<>::
 pause_dialog.tscn::PackedScene::7498292782733845273::1704982489::0::1::::<><>::uid://bswc06g8au3yg::::res://scenes/components/transition_button/transition_button.tscn<>res://scenes/ui/pause_dialog.gd<>uid://dugd88fmowfix::::res://scenes/ui/dialog_background.tscn<>uid://cg33m0umsdbg0::::res://assets/themes/global.tres<>uid://brd1y0pk3ipmb::::res://scenes/ui/settings_dialog.tscn
 settings_dialog.gd::GDScript::-1::1704982489::0::1::::<>Control<>::
 settings_dialog.tscn::PackedScene::3587446996415400149::1704982489::0::1::::<><>::uid://cg33m0umsdbg0::::res://assets/themes/global.tres<>uid://dc4hempqd0638::::res://scenes/ui/settings/settings_ui.tscn<>uid://dugd88fmowfix::::res://scenes/ui/dialog_background.tscn<>res://scenes/ui/settings_dialog.gd
+star_ui.gd::GDScript::-1::1705002195::0::1::::<>AnimatedSprite2D<>::
+star_ui.tscn::PackedScene::4449704129919274152::1705002195::0::1::::<><>::uid://ggjvbffw5anr::::res://assets/images/ui/Stars.png<>uid://dycdgarx10ekn::::res://assets/images/ui/Star_out.png<>uid://cbbujukcnx0pv::::res://assets/images/ui/Star_came.png<>res://scenes/ui/star_ui.gd
 ::res://scenes/ui/settings/::1704982489
 action_binding_category_ui.gd::GDScript::-1::1704982489::0::1::::<>VBoxContainer<>::
 action_binding_category_ui.tscn::PackedScene::7918400055859252032::1704982489::0::1::::<><>::uid://cg33m0umsdbg0::::res://assets/themes/global.tres<>res://scenes/ui/settings/action_binding_category_ui.gd
@@ -963,12 +995,12 @@ settings_ui.gd::GDScript::-1::1704982489::0::1::::<>VBoxContainer<>::
 settings_ui.tscn::PackedScene::7359939509532349453::1704982489::0::1::::<><>::uid://cg33m0umsdbg0::::res://assets/themes/global.tres<>res://scenes/ui/settings/settings_ui.gd<>uid://uvx63ijep6l4::::res://scenes/ui/settings/volume_settings_ui.tscn<>uid://bxbkrrbiq14yp::::res://scenes/ui/settings/control_settings_ui.tscn
 volume_settings_ui.gd::GDScript::-1::1704982489::0::1::::<>VBoxContainer<>::
 volume_settings_ui.tscn::PackedScene::1448582139467712743::1704982489::0::1::::<><>::uid://cg33m0umsdbg0::::res://assets/themes/global.tres<>res://scenes/ui/settings/volume_settings_ui.gd<>uid://dwm85ottuyxpy::::res://assets/sounds/volume_settings_ui/bong_001.ogg
-::res://scenes/world/::1704994614
-queue.gd::GDScript::-1::1704982489::0::1::::<>Node<>::
+::res://scenes/world/::1705002195
+queue.gd::GDScript::-1::1705002195::0::1::::Queue<>Node<>::
 world.gd::GDScript::-1::1704983186::0::1::::World<>Node2D<>::
-world.tscn::PackedScene::1610213683571642173::1704994614::0::1::::<><>::res://scenes/world/world.gd<>uid://dhgaakckrherw::::res://scenes/player/player.tscn<>uid://cyq8isbccnlsh::::res://assets/images/tilesets/world/Floor_1_16x16.png<>uid://dp4vpmwkx174n::::res://assets/images/tilesets/world/Wall_1_16x16.png<>uid://br50ootmvd1ij::::res://assets/images/tilesets/world/Items_1_16x16.png<>uid://huvs5q7fs2wy::::res://assets/images/tilesets/world/Bonus_16x16.png<>uid://bgwlyyqp4f2hv::::res://assets/images/tilesets/furniture spritesheet.png<>res://scenes/components/event_source/event_source.gd<>uid://dosp6nurof5x::::res://scenes/action_scenes/TVRepair/TVReapair.tscn<>uid://b7wir6v0viwtk::::res://scenes/ui/hud.tscn
-::res://scenes/world/spawner/::1704982489
-spawner.gd::GDScript::-1::1704982489::0::1::::Spawner<>Marker2D<>::
+world.tscn::PackedScene::1610213683571642173::1705002195::0::1::::<><>::res://scenes/world/world.gd<>uid://dhgaakckrherw::::res://scenes/player/player.tscn<>uid://cyq8isbccnlsh::::res://assets/images/tilesets/world/Floor_1_16x16.png<>uid://dp4vpmwkx174n::::res://assets/images/tilesets/world/Wall_1_16x16.png<>uid://br50ootmvd1ij::::res://assets/images/tilesets/world/Items_1_16x16.png<>uid://huvs5q7fs2wy::::res://assets/images/tilesets/world/Bonus_16x16.png<>uid://bgwlyyqp4f2hv::::res://assets/images/tilesets/furniture spritesheet.png<>res://scenes/components/event_source/event_source.gd<>uid://dosp6nurof5x::::res://scenes/action_scenes/TVRepair/TVReapair.tscn<>res://scenes/components/room/room.gd<>uid://b7wir6v0viwtk::::res://scenes/ui/hud.tscn<>res://scenes/world/queue.gd<>uid://bbmrknjfw4d1w::::res://scenes/components/visitor/visitor.tscn<>uid://bdr627n6fctr8::::res://scenes/interactive_objects/reception_table/reception_table.tscn<>uid://dcf2bm3q7t60w::::res://scenes/world/spawner/spawner.tscn
+::res://scenes/world/spawner/::1705002195
+spawner.gd::GDScript::-1::1705002195::0::1::::Spawner<>Marker2D<>::
 spawner.tscn::PackedScene::7311603446029504636::1704982489::0::1::::<><>::res://scenes/world/spawner/spawner.gd
 ::res://tests/::1704994615
 action_test.gd::GDScript::-1::1704982489::0::1::::<>ActionScene<>::

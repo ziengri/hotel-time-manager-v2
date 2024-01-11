@@ -6,11 +6,13 @@ class_name EventCard
 @onready var room_number  :Label =  $TextureRect/VBoxContainer/RoomNumber
 @onready var progress_bar  :ProgressBar = $TextureRect/VBoxContainer/ProgressBar
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var texture_rect = $TextureRect
 
 var event_info
 var room_id : int
 
 func _ready()->void:
+	texture_rect.modulate.a = 0
 	event_alias.text = (event_info['event_info'] as EventInfo).description
 	room_number.text = "Комната: " + str(room_id)
 	progress_bar.max_value = int(event_info['timer'].wait_time)
