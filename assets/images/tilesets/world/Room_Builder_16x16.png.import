@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpqinedutkcsu"
-path="res://.godot/imported/Wall_3_16x16.png-93893885ea9feec90b3658fecfecdbc5.ctex"
+uid="uid://bn1fynp7a0tou"
+path="res://.godot/imported/Room_Builder_16x16.png-45622fef5415d3dd16a75df15d6bffaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/tilesets/world/Wall_3_16x16.png"
-dest_files=["res://.godot/imported/Wall_3_16x16.png-93893885ea9feec90b3658fecfecdbc5.ctex"]
+source_file="res://assets/images/tilesets/world/Room_Builder_16x16.png"
+dest_files=["res://.godot/imported/Room_Builder_16x16.png-45622fef5415d3dd16a75df15d6bffaf.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://huvs5q7fs2wy"
-path="res://.godot/imported/Bonus_16x16.png-ec06999da6b8ad13dcece2e2c16e1aa8.ctex"
+uid="uid://dorh26cai1d1h"
+path="res://.godot/imported/Borders_16x16.png-18f3ee4143e9903429ae257fa8ad25dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/tilesets/world/Bonus_16x16.png"
-dest_files=["res://.godot/imported/Bonus_16x16.png-ec06999da6b8ad13dcece2e2c16e1aa8.ctex"]
+source_file="res://assets/images/tilesets/world/Singles_16x16/Borders_16x16.png"
+dest_files=["res://.godot/imported/Borders_16x16.png-18f3ee4143e9903429ae257fa8ad25dd.ctex"]
 
 [params]
 

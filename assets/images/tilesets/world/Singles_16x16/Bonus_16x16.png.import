@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyq8isbccnlsh"
-path="res://.godot/imported/Floor_1_16x16.png-95f1bda131b659a3a3421193aa319ca2.ctex"
+uid="uid://huvs5q7fs2wy"
+path="res://.godot/imported/Bonus_16x16.png-4a6b6004abe9ff86aaec3fea641ef318.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/tilesets/world/Floor_1_16x16.png"
-dest_files=["res://.godot/imported/Floor_1_16x16.png-95f1bda131b659a3a3421193aa319ca2.ctex"]
+source_file="res://assets/images/tilesets/world/Singles_16x16/Bonus_16x16.png"
+dest_files=["res://.godot/imported/Bonus_16x16.png-4a6b6004abe9ff86aaec3fea641ef318.ctex"]
 
 [params]
 
