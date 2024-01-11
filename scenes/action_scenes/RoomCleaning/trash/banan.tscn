@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsli1rpihmuoo"]
+
+[ext_resource type="PackedScene" uid="uid://4j44gpfimqkv" path="res://MiniGames/RoomCleaning/base_trash.tscn" id="1_uwgng"]
+[ext_resource type="Texture2D" uid="uid://by6urdm6s5l8k" path="res://MiniGames/RoomCleaning/resources/trash/banan.png" id="2_ftt76"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vju7u"]
+size = Vector2(20, 12)
+
+[node name="banan" instance=ExtResource("1_uwgng")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ftt76")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_vju7u")

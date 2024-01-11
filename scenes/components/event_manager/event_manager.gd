@@ -41,8 +41,8 @@ func add_event(source_link,event_source_key,event_info:EventInfo,visitor:Charact
 
 func finish_event(event_source_key)->void:
 	if (eventList[event_source_key]["event_info"] as EventInfo).is_in_room:
-		#(eventList[event_source_key]["visitor"] as CharacterBody2D).change_state()
-		pass
+		eventList[event_source_key]["visitor"].states.change_state(BaseStateVisitor.State.IDLEEVENT) 
+		
 	event_list_removed.emit(eventList[event_source_key])
 	give_reward((eventList[event_source_key]["event_info"] as EventInfo).reward)
 	remove_event_from_list(event_source_key)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbfybipf5ykmm"]
+
+[ext_resource type="PackedScene" uid="uid://4j44gpfimqkv" path="res://MiniGames/RoomCleaning/base_trash.tscn" id="1_oqwmj"]
+[ext_resource type="Texture2D" uid="uid://bd421itjbfa4s" path="res://MiniGames/RoomCleaning/resources/trash/trash6.png" id="2_5qk0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mhkr"]
+size = Vector2(20, 29)
+
+[node name="Apple" instance=ExtResource("1_oqwmj")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_5qk0s")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_7mhkr")

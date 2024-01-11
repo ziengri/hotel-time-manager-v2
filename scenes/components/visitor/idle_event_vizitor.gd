@@ -18,7 +18,7 @@ func start_event()->void:
 		get_parent().change_state(BaseStateVisitor.State.WALK)
 	else:
 		player.event_count -=1
-		player.room.generate_event()
+		player.room.generate_event(player)
 		get_parent().change_state(BaseStateVisitor.State.IDLE)
 
 

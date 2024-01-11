@@ -1,7 +1,7 @@
 extends Marker2D
 class_name Spawner
 
-@export var visitors_count : int  = 30
+@export var visitors_count : int  = 1
 @onready var timer :Timer = $Timer
 
 @export var visitor_scene :PackedScene
@@ -23,6 +23,7 @@ func spawn_visitor()->void:
 	visitor.visitor_sprite = load(visitors_sprite_path+(texture_array.pick_random()).trim_suffix(".import"))
 	visitor.event_count = randi_range(1,2)
 	visitor.global_position = global_position
+	visitors_count -=1
 	get_parent().add_child(visitor)
 	
 

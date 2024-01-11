@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd6jahuqml8af"]
+
+[ext_resource type="PackedScene" uid="uid://4j44gpfimqkv" path="res://MiniGames/RoomCleaning/base_trash.tscn" id="1_qsbuk"]
+[ext_resource type="Texture2D" uid="uid://cjl4g6n47kanh" path="res://MiniGames/RoomCleaning/resources/trash/bags.png" id="2_4p4xo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ao2d8"]
+size = Vector2(31, 25)
+
+[node name="bags" instance=ExtResource("1_qsbuk")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_4p4xo")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_ao2d8")

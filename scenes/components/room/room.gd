@@ -9,7 +9,10 @@ enum RoomStatus{
 	CLOSED
 }
 
-@export var status : RoomStatus 
+@export var status : RoomStatus : set = set_status
+func set_status(new_status):
+	status = new_status
+	#if
 @export var room_number : int = 0
 @onready var event_sources :Array[Area2D]
 
@@ -29,6 +32,6 @@ func _ready():
 #func _physics_process(delta):
 	#print(get_overlapping_areas())
 
-func generate_event():
+func generate_event(visitor):
 	var event_info :EventInfo = EventManager.event_infos['room_events'].pick_random()
-	EventManager.add_event(self,event_info.event_key+ "_" + str(room_number) ,event_info)
+	EventManager.add_event(self,event_info.event_key+ "_" + str(room_number) ,event_info,visitor)

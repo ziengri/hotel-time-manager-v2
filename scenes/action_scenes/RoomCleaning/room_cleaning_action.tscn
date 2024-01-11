@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx8efvbosmrlr"]
+
+[ext_resource type="Script" path="res://scenes/components/action_scene/action_scene.gd" id="1_gfdwp"]
+
+[node name="RoomCleaningAction" type="CanvasLayer"]
+script = ExtResource("1_gfdwp")
