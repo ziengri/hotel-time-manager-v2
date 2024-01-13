@@ -1,7 +1,9 @@
 res://world_tileset/world_tilemap.tscn
+res://world_tileset/world.tres
+res://world_tileset/game_background.tres
 res://assets/themes/global.tres
 res://assets/themes/new_theme.tres
-res://world_tileset/world.tres
+res://scenes/action_scenes/cooking_food/game.gd
 res://scenes/player/player.tscn
 res://scenes/world/world2.tscn
-res://world_tileset/game_background.tres
+res://scenes/action_scenes/cooking_food/game.tscn

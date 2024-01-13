@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705143653
+::res://::1705145799
 default_bus_layout.tres::AudioBusLayout::-1::1705143595::0::1::::<><>::
 default_env.tres::Environment::-1::1705143595::0::1::::<><>::
 icon.png::CompressedTexture2D::1912445624130052668::1705143595::1705143595::1::::<><>::
@@ -33,9 +33,9 @@ Character_sprite_1.png::CompressedTexture2D::7411203573845424522::1705143593::17
 Character_sprite_2.png::CompressedTexture2D::7486728094196007908::1705143593::1705143593::1::::<><>::
 Character_sprite_3.png::CompressedTexture2D::345295620241745688::1705143593::1705143593::1::::<><>::
 ::res://assets/images/tilesets/::1705143593
-::res://assets/images/tilesets/objects/::1705143593
+::res://assets/images/tilesets/objects/::1705143671
 table.png::CompressedTexture2D::5016504900877838143::1705143593::1705143671::1::::<><>::
-::res://assets/images/tilesets/world/::1705143594
+::res://assets/images/tilesets/world/::1705143672
 palette_interiors.png::CompressedTexture2D::3531358357535250380::1705143594::1705143671::1::::<><>::
 palette_interiors_x3.png::CompressedTexture2D::7909835703952076861::1705143594::1705143671::1::::<><>::
 Room_Builder_3d_walls_16x16.png::CompressedTexture2D::678390249923275454::1705143593::1705143671::1::::<><>::
@@ -43,7 +43,7 @@ Room_Builder_16x16.png::CompressedTexture2D::3352896624041182788::1705143593::17
 Room_Builder_Floors_16x16.png::CompressedTexture2D::4221346490716451038::1705143593::1705143670::1::::<><>::
 Room_Builder_Floors_48x48.png::CompressedTexture2D::8708792264072576866::1705143593::1705143671::1::::<><>::
 Room_Builder_Walls_16x16.png::CompressedTexture2D::4231836067654003254::1705143593::1705143670::1::::<><>::
-::res://assets/images/tilesets/world/Singles_16x16/::1705143594
+::res://assets/images/tilesets/world/Singles_16x16/::1705143671
 Bonus_16x16.png::CompressedTexture2D::533918263564535760::1705143593::1705143671::1::::<><>::
 Borders_16x16.png::CompressedTexture2D::8177475150540750423::1705143593::1705143671::1::::<><>::
 Carpets_1_16x16.png::CompressedTexture2D::1060081021604182107::1705143593::1705143671::1::::<><>::
@@ -144,7 +144,7 @@ Wall_2_16x16.png::CompressedTexture2D::5534603888349147168::1705143594::17051436
 Wall_3_16x16.png::CompressedTexture2D::5859213232946848320::1705143594::1705143671::1::::<><>::
 Wall_4_16x16.png::CompressedTexture2D::1087769581017521592::1705143594::1705143671::1::::<><>::
 Wall_5_16x16.png::CompressedTexture2D::6751082922818798244::1705143594::1705143670::1::::<><>::
-::res://assets/images/tilesets/world/Theme_Sorter_16x16/::1705143594
+::res://assets/images/tilesets/world/Theme_Sorter_16x16/::1705143671
 1_Generic_16x16.png::CompressedTexture2D::6483467364304095916::1705143594::1705143670::1::::<><>::
 2_LivingRoom_16x16.png::CompressedTexture2D::6994501827943018984::1705143594::1705143670::1::::<><>::
 3_Bathroom_16x16.png::CompressedTexture2D::7941014628375643121::1705143594::1705143670::1::::<><>::
@@ -171,7 +171,7 @@ Wall_5_16x16.png::CompressedTexture2D::6751082922818798244::1705143594::17051436
 24_Ice_Cream_Shop.png::CompressedTexture2D::2369609820464999189::1705143594::1705143671::1::::<><>::
 25_Shooting_Range.png::CompressedTexture2D::7546207420317704712::1705143594::1705143671::1::::<><>::
 26_Condominium.png::CompressedTexture2D::7270991466298201520::1705143594::1705143671::1::::<><>::
-::res://assets/images/ui/::1705143595
+::res://assets/images/ui/::1705143670
 arrow_pointing.png::CompressedTexture2D::7767896935528407013::1705143594::1705143670::1::::<><>::
 bars free.png::CompressedTexture2D::7081879786482082853::1705143594::1705143670::1::::<><>::
 base free.png::CompressedTexture2D::7120934572908203044::1705143594::1705143670::1::::<><>::
@@ -927,12 +927,12 @@ visitor8.png::CompressedTexture2D::8915383698631137438::1705143595::1705143595::
 ::res://assets/sounds/::1705143595
 ::res://assets/sounds/volume_settings_ui/::1705143595
 bong_001.ogg::AudioStreamOggVorbis::8730247144312329234::1705143595::1705143595::1::::<><>::
-::res://assets/themes/::1705143595
+::res://assets/themes/::1705143764
 event_card_panek.tres::StyleBoxTexture::1767782581248976368::1705143595::0::1::::<><>::uid://oyw5wqet167c::::res://theme/Tiny Wonder UI Free/buttons free.png
-global.tres::Theme::5253499856201630241::1705143595::0::1::::<><>::res://assets/fonts/text.tres<>res://assets/fonts/buttons.tres
+global.tres::Theme::5253499856201630241::1705143764::0::1::::<><>::res://assets/fonts/text.tres<>res://assets/fonts/buttons.tres
 invalid_action_binding.tres::Theme::-1::1705143595::0::1::::<><>::
 new_style_box_texture.tres::StyleBoxTexture::3218954742820486659::1705143595::0::1::::<><>::uid://dsotrmxke5sns::::res://assets/images/ui/buttons free.png
-new_theme.tres::Theme::5591831005973379106::1705143595::0::1::::<><>::uid://c75rr4mvk8xab::::res://assets/images/ui/bars free.png
+new_theme.tres::Theme::5591831005973379106::1705143764::0::1::::<><>::uid://c75rr4mvk8xab::::res://assets/images/ui/bars free.png
 ::res://atiled_map/::1705143595
 ::res://scenes/::1705143595
 ::res://scenes/action_scenes/::1705143595
@@ -943,7 +943,7 @@ check_clothes_action.tscn::PackedScene::5278618101630657981::1705143595::0::1:::
 cooking_action.tscn::PackedScene::803808768648804477::1705143595::0::1::::<><>::res://scenes/components/action_scene/action_scene.gd<>uid://ruytfghiixxu::::res://scenes/action_scenes/cooking_food/game.tscn
 game.gd::GDScript::-1::1705143595::0::1::::<>Node2D<>::
 game.tscn::PackedScene::1235989307052991902::1705143595::0::1::::<><>::res://scenes/action_scenes/cooking_food/game.gd<>uid://dwrktmjgscv12::::res://scenes/action_scenes/cooking_food/resourses/kitchen_floor.png<>uid://blrp66wgppurn::::res://scenes/action_scenes/cooking_food/resourses/kitchen_stove_off.png<>uid://oq8golyrp3go::::res://scenes/action_scenes/cooking_food/resourses/pan.png<>uid://bilkbvqvb8ehq::::res://scenes/action_scenes/cooking_food/resourses/chiken.png
-::res://scenes/action_scenes/cooking_food/resourses/::1705143595
+::res://scenes/action_scenes/cooking_food/resourses/::1705143670
 chiken.png::CompressedTexture2D::2971249672477593030::1705143595::1705143670::1::::<><>::
 Cooking.mp3::AudioStreamMP3::7427967435971904342::1705143595::1705143670::1::::<><>::
 kitchen_floor.png::CompressedTexture2D::8739152777427101331::1705143595::1705143670::1::::<><>::
@@ -954,7 +954,7 @@ pan.png::CompressedTexture2D::1017688983955673106::1705143595::1705143670::1::::
 fight_bomj_action.tscn::PackedScene::8471105541393691950::1705143595::0::1::::<><>::res://scenes/components/action_scene/action_scene.gd<>uid://ddp34gt1hbmc7::::res://scenes/action_scenes/FightBomj/game.tscn
 game.gd::GDScript::-1::1705143595::0::1::::<>Node2D<>::
 game.tscn::PackedScene::7402546457807113356::1705143595::0::1::::<><>::res://scenes/action_scenes/FightBomj/game.gd<>uid://ophl8tgtd8h8::::res://scenes/action_scenes/FightBomj/resourses/floor_bomj.png<>uid://bvldesrdcfn71::::res://scenes/action_scenes/FightBomj/resourses/bomj_head1.png<>uid://hgdvlomgxbey::::res://scenes/action_scenes/FightBomj/resourses/glow.png
-::res://scenes/action_scenes/FightBomj/resourses/::1705143595
+::res://scenes/action_scenes/FightBomj/resourses/::1705143670
 bomj.png::CompressedTexture2D::1635339211661679483::1705143595::1705143670::1::::<><>::
 bomj_head1.png::CompressedTexture2D::3883284821361526902::1705143595::1705143670::1::::<><>::
 Fight.mp3::AudioStreamMP3::770887474781656946::1705143595::1705143670::1::::<><>::
@@ -969,11 +969,11 @@ base_trash.tscn::PackedScene::2055868784653471977::1705143595::0::1::::<><>::res
 game.gd::GDScript::-1::1705143595::0::1::::<>Node2D<>::
 game.tscn::PackedScene::8877032761409971072::1705143595::0::1::::<><>::res://scenes/action_scenes/RoomCleaning/game.gd<>uid://dop5p886ae16i::::res://scenes/action_scenes/RoomCleaning/resources/carpet.png
 room_cleaning_action.tscn::PackedScene::8841982822774410059::1705143595::0::1::::<><>::res://scenes/components/action_scene/action_scene.gd<>uid://dyqdoyecwb54g::::res://scenes/action_scenes/RoomCleaning/game.tscn
-::res://scenes/action_scenes/RoomCleaning/resources/::1705143595
+::res://scenes/action_scenes/RoomCleaning/resources/::1705143670
 broom.png::CompressedTexture2D::5978409508086118841::1705143595::1705143670::1::::<><>::
 carpet.png::CompressedTexture2D::8174721610672007502::1705143595::1705143670::1::::<><>::
 clean room.mp3::AudioStreamMP3::5522693223173245970::1705143595::1705143670::1::::<><>::
-::res://scenes/action_scenes/RoomCleaning/resources/trash/::1705143595
+::res://scenes/action_scenes/RoomCleaning/resources/trash/::1705143670
 bags.png::CompressedTexture2D::5429022272643903345::1705143595::1705143670::1::::<><>::
 banan.png::CompressedTexture2D::4136193517274892424::1705143595::1705143670::1::::<><>::
 trash1.png::CompressedTexture2D::7467204723566918633::1705143595::1705143670::1::::<><>::
@@ -1000,7 +1000,7 @@ television_room.png::CompressedTexture2D::3004364648774123871::1705143595::17051
 TV football.mp3::AudioStreamMP3::8289645267685184394::1705143595::1705143595::1::::<><>::
 white_noise1.png::CompressedTexture2D::1167074190852520477::1705143595::1705143595::1::::<><>::
 white_noise2.png::CompressedTexture2D::8355850472525954342::1705143595::1705143595::1::::<><>::
-::res://scenes/action_scenes/Washing/::1705143595
+::res://scenes/action_scenes/Washing/::1705143670
 game.gd::GDScript::-1::1705143595::0::1::::<>Node2D<>::
 game.tscn::PackedScene::7406580366807476008::1705143595::0::1::::<><>::res://scenes/action_scenes/Washing/game.gd<>uid://oiu0d6pvdlj7::::res://scenes/action_scenes/Washing/resources/laundry.png<>uid://c3nsyeh8j0cvk::::res://world_tileset/game_background.tres<>uid://bw23myrccs8nc::::res://scenes/action_scenes/Washing/mashine_full.tscn<>uid://cr825xdybi12r::::res://scenes/action_scenes/Washing/resources/washing_mashine_clothes.png<>uid://q3y7xan72t3d::::res://scenes/action_scenes/Washing/resources/washing_mashine_open.png<>uid://cnregsw58pcfl::::res://scenes/action_scenes/Washing/resources/washing_mashine.png<>uid://c0iga7iitvd48::::res://scenes/action_scenes/Washing/resources/Open matching.mp3
 mashine_full.gd::GDScript::-1::1705143595::0::1::::<>Node2D<>::
@@ -1008,7 +1008,7 @@ mashine_full.tscn::PackedScene::3988036235330115312::1705143595::0::1::::<><>::u
 washing_action.tscn::PackedScene::3037433269589221666::1705143595::0::1::::<><>::res://scenes/components/action_scene/action_scene.gd<>uid://ddr2kc1w5a2im::::res://scenes/action_scenes/Washing/game.tscn
 washing_mashine.tscn::PackedScene::6283532422715317255::1705143595::0::1::::<><>::uid://cnregsw58pcfl::::res://scenes/action_scenes/Washing/resources/washing_mashine.png
 washing_mashine_full.png::CompressedTexture2D::4053397577993351426::1705143595::1705143670::1::::<><>::
-::res://scenes/action_scenes/Washing/resources/::1705143595
+::res://scenes/action_scenes/Washing/resources/::1705143670
 border_tank.png::CompressedTexture2D::3362315048793561567::1705143595::1705143670::1::::<><>::
 full_tank.png::CompressedTexture2D::8704158984775320573::1705143595::1705143670::1::::<><>::
 laundry.png::CompressedTexture2D::1000418023836595974::1705143595::1705143670::1::::<><>::
@@ -1029,10 +1029,10 @@ event_manager.gd::GDScript::-1::1705143595::0::1::::<>Node<>::
 event_resource.gd::GDScript::-1::1705143595::0::1::::EventInfo<>Resource<>::
 ::res://scenes/components/event_manager/events/::1705143595
 ::res://scenes/components/event_manager/events/other_events/::1705143595
-room_cleaning.tres::Resource/EventInfo::8996120822336954822::1705143595::0::1::::<><>::res://scenes/components/event_manager/event_resource.gd
+room_cleaning.tres::Resource/Resource::8996120822336954822::1705143595::0::1::::<><>::res://scenes/components/event_manager/event_resource.gd
 ::res://scenes/components/event_manager/events/room_events/::1705143595
-tv_reapair.tres::Resource/EventInfo::6082861210524326196::1705143595::0::1::::<><>::res://scenes/components/event_manager/event_resource.gd
-wardrobe.tres::Resource/EventInfo::1064377152938191975::1705143595::0::1::::<><>::res://scenes/components/event_manager/event_resource.gd
+tv_reapair.tres::Resource/Resource::6082861210524326196::1705143595::0::1::::<><>::res://scenes/components/event_manager/event_resource.gd
+wardrobe.tres::Resource/Resource::1064377152938191975::1705143595::0::1::::<><>::res://scenes/components/event_manager/event_resource.gd
 ::res://scenes/components/event_source/::1705143595
 event_source.gd::GDScript::-1::1705143595::0::1::::EventSource<>Area2D<>::
 ::res://scenes/components/file_content_display/::1705143595
@@ -1087,11 +1087,11 @@ wardrobe_object.tscn::PackedScene::7684899328890200800::1705143595::0::1::::<><>
 ::res://scenes/interactive_objects/washing_machine/::1705143595
 washing_machine_eventsource.gd::GDScript::-1::1705143595::0::1::::<>EventSource<>::
 washing_machine_object.tscn::PackedScene::7568986497224322486::1705143595::0::1::::<><>::uid://dlexl6pgt6rlp::::res://assets/images/tilesets/world/Theme_Sorter_16x16/3_Bathroom_16x16.png<>res://scenes/interactive_objects/washing_machine/washing_machine_eventsource.gd<>uid://bjjmc183gk2f3::::res://scenes/action_scenes/Washing/washing_action.tscn
-::res://scenes/player/::1705143595
+::res://scenes/player/::1705145650
 idle.gd::GDScript::-1::1705143595::0::1::::<>BaseState<>::
 image.png::CompressedTexture2D::8214874069622837409::1705143595::1705143595::1::::<><>::
 player.gd::GDScript::-1::1705143595::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::7662970751870351088::1705143595::0::1::::<><>::res://scenes/player/player.gd<>uid://bal5wnssgi4sb::::res://assets/images/player/Character_sprite_0.png<>uid://2uo0vk1ansft::::res://scenes/components/camera_player/camera_player.tscn<>uid://0pb2pxp4hx33::::res://assets/fonts/Jellee-Roman.otf<>res://scenes/player/player_states.gd<>res://scenes/player/idle.gd<>res://scenes/player/walk.gd
+player.tscn::PackedScene::7662970751870351088::1705145650::0::1::::<><>::res://scenes/player/player.gd<>uid://bal5wnssgi4sb::::res://assets/images/player/Character_sprite_0.png<>uid://2uo0vk1ansft::::res://scenes/components/camera_player/camera_player.tscn<>uid://0pb2pxp4hx33::::res://assets/fonts/Jellee-Roman.otf<>res://scenes/player/player_states.gd<>res://scenes/player/idle.gd<>res://scenes/player/walk.gd
 player_states.gd::GDScript::-1::1705143595::0::1::::<>StateMachine<>::
 Stats.gd::GDScript::-1::1705143595::0::1::::<>Node<>::
 walk.gd::GDScript::-1::1705143595::0::1::::<>BaseState<>::
@@ -1124,9 +1124,9 @@ settings_ui.gd::GDScript::-1::1705143595::0::1::::<>VBoxContainer<>::
 settings_ui.tscn::PackedScene::7359939509532349453::1705143595::0::1::::<><>::uid://cg33m0umsdbg0::::res://assets/themes/global.tres<>res://scenes/ui/settings/settings_ui.gd<>uid://uvx63ijep6l4::::res://scenes/ui/settings/volume_settings_ui.tscn<>uid://bxbkrrbiq14yp::::res://scenes/ui/settings/control_settings_ui.tscn
 volume_settings_ui.gd::GDScript::-1::1705143595::0::1::::<>VBoxContainer<>::
 volume_settings_ui.tscn::PackedScene::1448582139467712743::1705143595::0::1::::<><>::uid://cg33m0umsdbg0::::res://assets/themes/global.tres<>res://scenes/ui/settings/volume_settings_ui.gd<>uid://dwm85ottuyxpy::::res://assets/sounds/volume_settings_ui/bong_001.ogg
-::res://scenes/world/::1705143595
+::res://scenes/world/::1705145650
 queue.gd::GDScript::-1::1705143595::0::1::::Queue<>Node<>::
-world2.tscn::PackedScene::8113425943196125680::1705143595::0::1::::<><>::res://scenes/world/world.gd<>uid://c4l4qvwa5wy4l::::res://world_tileset/world_tilemap.tscn<>uid://dhgaakckrherw::::res://scenes/player/player.tscn<>uid://df3qdpv3i48ec::::res://scenes/interactive_objects/washing_machine/washing_machine_object.tscn<>res://scenes/components/room/room.gd<>uid://dhqvf0tauinsi::::res://scenes/interactive_objects/wardrobe/wardrobe_object.tscn<>res://scenes/world/queue.gd<>uid://bdr627n6fctr8::::res://scenes/interactive_objects/reception_table/reception_table.tscn<>uid://b7wir6v0viwtk::::res://scenes/ui/hud.tscn<>uid://dcf2bm3q7t60w::::res://scenes/world/spawner/spawner.tscn<>uid://bbmrknjfw4d1w::::res://scenes/components/visitor/visitor.tscn
+world2.tscn::PackedScene::8113425943196125680::1705145650::0::1::::<><>::res://scenes/world/world.gd<>uid://c4l4qvwa5wy4l::::res://world_tileset/world_tilemap.tscn<>uid://dhgaakckrherw::::res://scenes/player/player.tscn<>uid://df3qdpv3i48ec::::res://scenes/interactive_objects/washing_machine/washing_machine_object.tscn<>res://scenes/components/room/room.gd<>uid://dhqvf0tauinsi::::res://scenes/interactive_objects/wardrobe/wardrobe_object.tscn<>res://scenes/world/queue.gd<>uid://bdr627n6fctr8::::res://scenes/interactive_objects/reception_table/reception_table.tscn<>uid://b7wir6v0viwtk::::res://scenes/ui/hud.tscn<>uid://dcf2bm3q7t60w::::res://scenes/world/spawner/spawner.tscn<>uid://bbmrknjfw4d1w::::res://scenes/components/visitor/visitor.tscn
 world.gd::GDScript::-1::1705143595::0::1::::World<>Node2D<>::
 world.tscn::PackedScene::1610213683571642173::1705143595::0::1::::<><>::res://scenes/world/world.gd<>uid://dhgaakckrherw::::res://scenes/player/player.tscn<>uid://cyq8isbccnlsh::::res://assets/images/tilesets/world/Singles_16x16/Floor_1_16x16.png<>uid://dp4vpmwkx174n::::res://assets/images/tilesets/world/Singles_16x16/Wall_1_16x16.png<>uid://br50ootmvd1ij::::res://assets/images/tilesets/world/Singles_16x16/Items_1_16x16.png<>uid://huvs5q7fs2wy::::res://assets/images/tilesets/world/Singles_16x16/Bonus_16x16.png<>uid://bgwlyyqp4f2hv::::res://assets/images/tilesets/world/Singles_16x16/furniture spritesheet.png<>res://scenes/components/event_source/event_source.gd<>uid://dosp6nurof5x::::res://scenes/action_scenes/TVRepair/TVReapair_action.tscn<>res://scenes/components/room/room.gd<>uid://dx8efvbosmrlr::::res://scenes/action_scenes/RoomCleaning/room_cleaning_action.tscn<>uid://b7wir6v0viwtk::::res://scenes/ui/hud.tscn<>res://scenes/world/queue.gd<>uid://bbmrknjfw4d1w::::res://scenes/components/visitor/visitor.tscn<>uid://bdr627n6fctr8::::res://scenes/interactive_objects/reception_table/reception_table.tscn<>uid://dcf2bm3q7t60w::::res://scenes/world/spawner/spawner.tscn
 ::res://scenes/world/spawner/::1705143595
@@ -1156,8 +1156,8 @@ input_prompt_util.gd::GDScript::-1::1705143595::0::1::::InputPromptUtil<>Object<
 input_settings_action.gd::GDScript::-1::1705143595::0::1::::InputSettingsAction<>RefCounted<>::
 input_settings_category.gd::GDScript::-1::1705143595::0::1::::InputSettingsCategory<>RefCounted<>::
 input_settings_category_reader.gd::GDScript::-1::1705143595::0::1::::InputSettingsCategoryReader<>RefCounted<>::
-::res://world_tileset/::1705143595
-game_background.tres::TileSet::6766101887396812948::1705143595::0::1::::<><>::uid://dwcush4sqvayk::::res://assets/images/tilesets/world/Room_Builder_Floors_48x48.png
+::res://world_tileset/::1705145650
+game_background.tres::TileSet::6766101887396812948::1705145571::0::1::::<><>::uid://dwcush4sqvayk::::res://assets/images/tilesets/world/Room_Builder_Floors_48x48.png
 interior_2.tscn::PackedScene::2436104611962107468::1705143595::0::1::::<><>::uid://b1e37vydknkck::::res://assets/images/tilesets/world/Room_Builder_Floors_16x16.png<>uid://b1j6ysl4s53kc::::res://assets/images/tilesets/world/Room_Builder_Walls_16x16.png<>uid://jwu8uqh1uwju::::res://assets/images/tilesets/world/Room_Builder_3d_walls_16x16.png<>uid://bapbgcoob8b5m::::res://assets/images/tilesets/world/Theme_Sorter_16x16/4_Bedroom_16x16.png<>uid://c6wgonhlagtj1::::res://assets/images/tilesets/world/Theme_Sorter_16x16/2_LivingRoom_16x16.png<>uid://c21tmee8335mv::::res://assets/images/tilesets/world/Theme_Sorter_16x16/14_Basement_16x16.png<>uid://dlexl6pgt6rlp::::res://assets/images/tilesets/world/Theme_Sorter_16x16/3_Bathroom_16x16.png<>uid://cymv033u7wpfw::::res://assets/images/tilesets/world/Theme_Sorter_16x16/1_Generic_16x16.png<>uid://bi7bg248a5ejm::::res://assets/images/tilesets/world/Theme_Sorter_16x16/12_Kitchen_16x16.png
-world.tres::TileSet::129284692471722118::1705143595::0::1::::<><>::uid://b1e37vydknkck::::res://assets/images/tilesets/world/Room_Builder_Floors_16x16.png<>uid://b1j6ysl4s53kc::::res://assets/images/tilesets/world/Room_Builder_Walls_16x16.png<>uid://b00lxs6ad4oo2::::res://assets/images/tilesets/world/Theme_Sorter_16x16/22_Museum.png<>uid://jwu8uqh1uwju::::res://assets/images/tilesets/world/Room_Builder_3d_walls_16x16.png<>uid://bapbgcoob8b5m::::res://assets/images/tilesets/world/Theme_Sorter_16x16/4_Bedroom_16x16.png<>uid://c6wgonhlagtj1::::res://assets/images/tilesets/world/Theme_Sorter_16x16/2_LivingRoom_16x16.png<>uid://c21tmee8335mv::::res://assets/images/tilesets/world/Theme_Sorter_16x16/14_Basement_16x16.png<>uid://dlexl6pgt6rlp::::res://assets/images/tilesets/world/Theme_Sorter_16x16/3_Bathroom_16x16.png<>uid://cymv033u7wpfw::::res://assets/images/tilesets/world/Theme_Sorter_16x16/1_Generic_16x16.png<>uid://bi7bg248a5ejm::::res://assets/images/tilesets/world/Theme_Sorter_16x16/12_Kitchen_16x16.png<>uid://dwcush4sqvayk::::res://assets/images/tilesets/world/Room_Builder_Floors_48x48.png
-world_tilemap.tscn::PackedScene::6832816490693538261::1705143595::0::1::::<><>::uid://b3vkg2b3fbus::::res://world_tileset/world.tres
+world.tres::TileSet::129284692471722118::1705145533::0::1::::<><>::uid://b1e37vydknkck::::res://assets/images/tilesets/world/Room_Builder_Floors_16x16.png<>uid://b1j6ysl4s53kc::::res://assets/images/tilesets/world/Room_Builder_Walls_16x16.png<>uid://b00lxs6ad4oo2::::res://assets/images/tilesets/world/Theme_Sorter_16x16/22_Museum.png<>uid://jwu8uqh1uwju::::res://assets/images/tilesets/world/Room_Builder_3d_walls_16x16.png<>uid://bapbgcoob8b5m::::res://assets/images/tilesets/world/Theme_Sorter_16x16/4_Bedroom_16x16.png<>uid://c6wgonhlagtj1::::res://assets/images/tilesets/world/Theme_Sorter_16x16/2_LivingRoom_16x16.png<>uid://c21tmee8335mv::::res://assets/images/tilesets/world/Theme_Sorter_16x16/14_Basement_16x16.png<>uid://dlexl6pgt6rlp::::res://assets/images/tilesets/world/Theme_Sorter_16x16/3_Bathroom_16x16.png<>uid://cymv033u7wpfw::::res://assets/images/tilesets/world/Theme_Sorter_16x16/1_Generic_16x16.png<>uid://bi7bg248a5ejm::::res://assets/images/tilesets/world/Theme_Sorter_16x16/12_Kitchen_16x16.png<>uid://dwcush4sqvayk::::res://assets/images/tilesets/world/Room_Builder_Floors_48x48.png
+world_tilemap.tscn::PackedScene::6832816490693538261::1705145650::0::1::::<><>::uid://b3vkg2b3fbus::::res://world_tileset/world.tres

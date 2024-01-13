@@ -19,7 +19,7 @@ func _ready():
 	progress_bar.max_value = 10000
 
 func on_fire(viewport, event:InputEventMouseButton, shape_idx):
-	label.text = "Используй A/D что бы не дать сбежать курочке с плиты"
+	label.text = "Используй A/D что бы \nне дать сбежать курочке с плиты"
 	area_2d_1.input_event.disconnect(on_fire)
 	$Sprite2D.texture = load("res://scenes/action_scenes/cooking_food/resourses/kitchen_stove_on.png")
 	pan.position.x = fire.x
