@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventInfo" load_steps=2 format=3 uid="uid://pfuevpi5l35d"]
+
+[ext_resource type="Script" path="res://scenes/components/event_manager/event_resource.gd" id="1_qucph"]
+
+[resource]
+script = ExtResource("1_qucph")
+event_key = "wardrobe"
+description = "Почини телевизор"
+time_to_event = 60
+reward = 12
+is_in_room = true

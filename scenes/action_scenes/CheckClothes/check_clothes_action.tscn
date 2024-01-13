@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chhaclw00ea4t"]
+
+[ext_resource type="Script" path="res://scenes/action_scenes/CheckClothes/check_clothes_action.gd" id="1_6tb43"]
+
+[node name="CheckClothesAction" type="CanvasLayer"]
+script = ExtResource("1_6tb43")

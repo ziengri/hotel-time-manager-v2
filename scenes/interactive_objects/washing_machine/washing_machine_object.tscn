@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://df3qdpv3i48ec"]
+
+[ext_resource type="Texture2D" uid="uid://dlexl6pgt6rlp" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/3_Bathroom_16x16.png" id="1_mskbo"]
+[ext_resource type="Script" path="res://scenes/interactive_objects/washing_machine/washing_machine_eventsource.gd" id="2_ma163"]
+[ext_resource type="PackedScene" uid="uid://bjjmc183gk2f3" path="res://scenes/action_scenes/Washing/washing_action.tscn" id="3_4q74m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_361nn"]
+size = Vector2(20, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lolx"]
+size = Vector2(20, 33)
+
+[node name="WashingMachine" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(3, -13)
+texture = ExtResource("1_mskbo")
+region_enabled = true
+region_rect = Rect2(68.4494, 518.201, 27.0408, 41.6436)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_361nn")
+
+[node name="EventSource" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("2_ma163")
+event_key = "washing_machine"
+action_scene_path = ExtResource("3_4q74m")
+status = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
+position = Vector2(1, -12)
+shape = SubResource("RectangleShape2D_0lolx")
+debug_color = Color(0.894118, 0.203922, 0.623529, 0.419608)

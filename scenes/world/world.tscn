@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://huvs5q7fs2wy" path="res://assets/images/tilesets/world/Singles_16x16/Bonus_16x16.png" id="6_4e7gl"]
 [ext_resource type="Texture2D" uid="uid://bgwlyyqp4f2hv" path="res://assets/images/tilesets/world/Singles_16x16/furniture spritesheet.png" id="7_3pqak"]
 [ext_resource type="Script" path="res://scenes/components/event_source/event_source.gd" id="9_274yw"]
-[ext_resource type="PackedScene" uid="uid://dosp6nurof5x" path="res://scenes/action_scenes/TVRepair/TVReapair.tscn" id="10_3c6cc"]
+[ext_resource type="PackedScene" uid="uid://dosp6nurof5x" path="res://scenes/action_scenes/TVRepair/TVReapair_action.tscn" id="10_3c6cc"]
 [ext_resource type="Script" path="res://scenes/components/room/room.gd" id="11_7aspo"]
 [ext_resource type="PackedScene" uid="uid://dx8efvbosmrlr" path="res://scenes/action_scenes/RoomCleaning/room_cleaning_action.tscn" id="11_tb0g0"]
 [ext_resource type="PackedScene" uid="uid://b7wir6v0viwtk" path="res://scenes/ui/hud.tscn" id="11_w2i7n"]
@@ -4805,7 +4805,6 @@ y_sort_enabled = true
 position = Vector2(459, 226)
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 y_sort_enabled = true
 position = Vector2(0, 2)
 tile_set = SubResource("TileSet_udaqg")

@@ -12,6 +12,8 @@ extends Node2D
 @onready var hint :Label  =$Container/Label
 
 func _ready():
+	if (Stats.player.object_in_hands != Stats.player.ObjectHold.DIRTY):
+		get_parent()._cancel()
 	washing_machine.input_event.connect(open_machine)
 	washing_machine.mouse_entered.connect(func(): print('hello!'))
 
@@ -49,6 +51,9 @@ func close_machine(viewport, event:InputEventMouseButton, shape_idx):
 		washing_machine_game.process_mode = Node.PROCESS_MODE_PAUSABLE
 
 func finish_game():
+	if (Stats.player.object_in_hands != Stats.player.ObjectHold.DIRTY):
+		get_parent()._cancel()
+	Stats.player.object_in_hands = Stats.player.ObjectHold.CLEAN
 	hint.text= "Готово"
 	await get_tree().create_timer(1).timeout
 	wash_music.stop()

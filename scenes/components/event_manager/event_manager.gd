@@ -65,8 +65,14 @@ func add_to_eventList(room,event_info:EventInfo,timer:Timer)->void:
 
 
 func on_event_fail(event_source_key)->void:
-	if eventList[event_source_key]['event_source_node'].active_scene != null :
-			(eventList[event_source_key]['event_source_node'] as EventSource).active_scene._cancel()
+	var event_source_node: EventSource = eventList[event_source_key]['event_source_node'] as EventSource
+	if event_source_node.active_scene != null :
+		event_source_node.active_scene._cancel()
+	if(eventList[event_source_key]['visitor']!= null):
+		eventList[event_source_key]['visitor'].states.change_state(BaseStateVisitor.State.IDLEEVENT)
+	event_list_removed.emit(eventList[event_source_key])
+	remove_event_from_list(event_source_key)	
+	
 
 	Stats.stars -=1
 

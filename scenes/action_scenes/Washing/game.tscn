@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddr2kc1w5a2im"]
+[gd_scene load_steps=11 format=3 uid="uid://ddr2kc1w5a2im"]
 
 [ext_resource type="Script" path="res://scenes/action_scenes/Washing/game.gd" id="1_2btok"]
 [ext_resource type="Texture2D" uid="uid://oiu0d6pvdlj7" path="res://scenes/action_scenes/Washing/resources/laundry.png" id="2_02ec1"]
+[ext_resource type="TileSet" uid="uid://c3nsyeh8j0cvk" path="res://world_tileset/game_background.tres" id="2_4ufea"]
 [ext_resource type="PackedScene" uid="uid://bw23myrccs8nc" path="res://scenes/action_scenes/Washing/mashine_full.tscn" id="3_ccm8b"]
 [ext_resource type="Texture2D" uid="uid://cr825xdybi12r" path="res://scenes/action_scenes/Washing/resources/washing_mashine_clothes.png" id="4_fpdgm"]
 [ext_resource type="Texture2D" uid="uid://q3y7xan72t3d" path="res://scenes/action_scenes/Washing/resources/washing_mashine_open.png" id="5_7itbd"]
@@ -19,7 +20,14 @@ loop_offset = 5.0
 [node name="game" type="Node2D"]
 script = ExtResource("1_2btok")
 
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_4ufea")
+rendering_quadrant_size = 48
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 589824, 25, 65536, 589824, 25, 131072, 589824, 25, 196608, 589824, 25, 262144, 589824, 25, 327680, 589824, 25, 1, 589824, 25, 65537, 589824, 25, 131073, 589824, 25, 196609, 589824, 25, 262145, 589824, 25, 327681, 589824, 25, 2, 589824, 25, 65538, 589824, 25, 131074, 589824, 25, 196610, 589824, 25, 262146, 589824, 25, 327682, 589824, 25, 3, 589824, 25, 65539, 589824, 25, 131075, 589824, 25, 196611, 589824, 25, 262147, 589824, 25, 327683, 589824, 25, 4, 589824, 25, 65540, 589824, 25, 131076, 589824, 25, 196612, 589824, 25, 262148, 589824, 25, 327684, 589824, 25, 5, 589824, 25, 65541, 589824, 25, 131077, 589824, 25, 196613, 589824, 25, 262149, 589824, 25, 327685, 589824, 25, 6, 589824, 25, 65542, 589824, 25, 131078, 589824, 25, 196614, 589824, 25, 262150, 589824, 25, 327686, 589824, 25, 7, 589824, 25, 65543, 589824, 25, 131079, 589824, 25, 196615, 589824, 25, 262151, 589824, 25, 327687, 589824, 25, 8, 589824, 25, 65544, 589824, 25, 131080, 589824, 25, 196616, 589824, 25, 262152, 589824, 25, 327688, 589824, 25, 9, 589824, 25, 65545, 589824, 25, 131081, 589824, 25, 196617, 589824, 25, 262153, 589824, 25, 327689, 589824, 25)
+
 [node name="Laundry" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(224, 126)
 texture = ExtResource("2_02ec1")
 

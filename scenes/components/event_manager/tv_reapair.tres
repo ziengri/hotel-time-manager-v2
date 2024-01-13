@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_4c0oi")
-event_key = "tv_repair"
-description = "Почини телевизор"
+event_key = "wardrobe"
+description = "Постирай вещи"
 time_to_event = 60
 reward = 12
 is_in_room = true
