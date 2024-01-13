@@ -1,11 +1,14 @@
-[gd_resource type="TileSet" load_steps=23 format=3 uid="uid://b3vkg2b3fbus"]
+[gd_resource type="TileSet" load_steps=27 format=3 uid="uid://b3vkg2b3fbus"]
 
 [ext_resource type="Texture2D" uid="uid://b1e37vydknkck" path="res://assets/images/tilesets/world/Room_Builder_Floors_16x16.png" id="1_s0rao"]
 [ext_resource type="Texture2D" uid="uid://b1j6ysl4s53kc" path="res://assets/images/tilesets/world/Room_Builder_Walls_16x16.png" id="2_77uer"]
 [ext_resource type="Texture2D" uid="uid://b00lxs6ad4oo2" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/22_Museum.png" id="3_iqdrn"]
 [ext_resource type="Texture2D" uid="uid://jwu8uqh1uwju" path="res://assets/images/tilesets/world/Room_Builder_3d_walls_16x16.png" id="3_mgrv0"]
+[ext_resource type="PackedScene" uid="uid://ljhba38o876x" path="res://scenes/interactive_objects/tv_box/tv_box.tscn" id="4_eu2b1"]
 [ext_resource type="Texture2D" uid="uid://bapbgcoob8b5m" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/4_Bedroom_16x16.png" id="4_mhcfg"]
+[ext_resource type="PackedScene" uid="uid://dapkrmiovwo8b" path="res://scenes/interactive_objects/tv_box/tv_box_white.tscn" id="5_d77bs"]
 [ext_resource type="Texture2D" uid="uid://c6wgonhlagtj1" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/2_LivingRoom_16x16.png" id="5_u7ojv"]
+[ext_resource type="PackedScene" uid="uid://cevvp25pfl1kv" path="res://scenes/interactive_objects/clean_broom/clean_broom.tscn" id="6_55tiq"]
 [ext_resource type="Texture2D" uid="uid://c21tmee8335mv" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/14_Basement_16x16.png" id="6_nhxtr"]
 [ext_resource type="Texture2D" uid="uid://dlexl6pgt6rlp" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/3_Bathroom_16x16.png" id="7_4n0yh"]
 [ext_resource type="Texture2D" uid="uid://cymv033u7wpfw" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/1_Generic_16x16.png" id="8_qovb6"]
@@ -414,6 +417,12 @@ texture = ExtResource("3_iqdrn")
 0:52/0/y_sort_origin = -8
 0:52/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:52/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_wm20x"]
+resource_name = "interactable_objects"
+scenes/2/scene = ExtResource("4_eu2b1")
+scenes/3/scene = ExtResource("5_d77bs")
+scenes/4/scene = ExtResource("6_55tiq")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4et7a"]
 texture = ExtResource("3_mgrv0")
@@ -16886,3 +16895,4 @@ sources/7 = SubResource("TileSetAtlasSource_b1rgl")
 sources/8 = SubResource("TileSetAtlasSource_vdm6m")
 sources/10 = SubResource("TileSetAtlasSource_sfdw7")
 sources/9 = SubResource("TileSetAtlasSource_kswvq")
+sources/11 = SubResource("TileSetScenesCollectionSource_wm20x")

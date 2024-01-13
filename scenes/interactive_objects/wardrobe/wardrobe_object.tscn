@@ -4,24 +4,24 @@
 [ext_resource type="Script" path="res://scenes/components/event_source/event_source.gd" id="2_vnap7"]
 [ext_resource type="PackedScene" uid="uid://chhaclw00ea4t" path="res://scenes/action_scenes/CheckClothes/check_clothes_action.tscn" id="4_j4j6s"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_npf5d"]
-size = Vector2(27, 25)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4o73"]
 size = Vector2(27, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npf5d"]
+size = Vector2(27, 25)
 
 [node name="WardrobeObject" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(1, -13)
 
-[node name="Sprite" type="TileMap" parent="."]
-y_sort_enabled = true
-tile_set = ExtResource("2_ealka")
-format = 2
-layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(-65537, 65543, 72, -1, 65543, 73, 65535, 65543, 74, -131072, 196615, 72, -65536, 196615, 73, 0, 196615, 74)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_x4o73")
 
 [node name="EventSource" type="Area2D" parent="."]
+z_index = 1
 collision_layer = 4
 collision_mask = 0
 monitoring = false
@@ -34,8 +34,9 @@ position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_npf5d")
 debug_color = Color(0.858824, 0.278431, 0.603922, 0.419608)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.5, 3)
-shape = SubResource("RectangleShape2D_x4o73")
+[node name="Sprite" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("2_ealka")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-65537, 65543, 72, -1, 65543, 73, 65535, 65543, 74, -131072, 196615, 72, -65536, 196615, 73, 0, 196615, 74)

@@ -77,4 +77,5 @@ func finish_game():
 	$Sprite2D.texture = load("res://scenes/action_scenes/cooking_food/resourses/kitchen_stove_off.png")
 	await get_tree().create_timer(1).timeout
 	cooking_sound.stop()
+	Stats.player.object_in_hands = Stats.player.ObjectHold.FOOD
 	get_parent()._finish()

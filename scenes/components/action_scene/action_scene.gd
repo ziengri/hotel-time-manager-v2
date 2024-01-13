@@ -21,15 +21,15 @@ func _ready():
 	get_child(0).global_position.x+= 100
 	get_child(0).global_position.y+= 50
 	
-	#if physic_stop_eqired : Stats.player.set_physics_process(false)
+	if physic_stop_reqired : Stats.player.set_physics_process(false)
 
 
 func _finish()->void:
-	#if physic_stop_reqired : Stats.player.set_physics_process(true)
+	if physic_stop_reqired : Stats.player.set_physics_process(true)
 	finished.emit()
 
 func _cancel()->void:
-	#if physic_stop_reqired : Stats.player.set_physics_process(true)
+	if physic_stop_reqired : Stats.player.set_physics_process(true)
 	canceled.emit()
 
 

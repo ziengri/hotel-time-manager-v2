@@ -8,7 +8,7 @@ enum Status{
 	NONACTIVE
 }
 #//Сеттер для стрелочки.подсвечивание
-@export_enum("default","room_cleaning","wardrobe","tv_repair","need_food","washing_machine") var event_key : String
+@export_enum("default","room_cleaning","wardrobe","tv_repair","cocking_food","need_food","washing_machine") var event_key : String
 @export var action_scene_path : PackedScene
 
 var is_iteracting : bool = false

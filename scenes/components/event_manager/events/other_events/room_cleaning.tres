@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_4knli")
 event_key = "room_cleaning"
-description = "Почисти комнату"
+description = "Почитсти комнату"
 time_to_event = 0
 reward = 0
 is_in_room = true
