@@ -1,7 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://dhgaakckrherw"]
+[gd_scene load_steps=32 format=3 uid="uid://dhgaakckrherw"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_r7bgg"]
 [ext_resource type="Texture2D" uid="uid://bal5wnssgi4sb" path="res://assets/images/player/Character_sprite_0.png" id="2_bg5fh"]
+[ext_resource type="PackedScene" uid="uid://2uo0vk1ansft" path="res://scenes/components/camera_player/camera_player.tscn" id="2_v27b6"]
 [ext_resource type="FontFile" uid="uid://0pb2pxp4hx33" path="res://assets/fonts/Jellee-Roman.otf" id="3_84khi"]
 [ext_resource type="Script" path="res://scenes/player/player_states.gd" id="3_klbyr"]
 [ext_resource type="Script" path="res://scenes/player/idle.gd" id="4_oxyia"]
@@ -208,10 +209,7 @@ size = Vector2(10.9529, 14)
 collision_mask = 3
 script = ExtResource("1_r7bgg")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
-position_smoothing_enabled = true
-position_smoothing_speed = 4.0
+[node name="Camera2D" parent="." instance=ExtResource("2_v27b6")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

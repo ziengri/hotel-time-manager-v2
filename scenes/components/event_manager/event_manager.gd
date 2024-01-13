@@ -29,7 +29,7 @@ func add_event(source_link,event_source_key,event_info:EventInfo,visitor:Charact
 	event_source_node.action_finish.connect(finish_event)
 	event_source_node.status = EventSource.Status.ACTIVE
 	
-	eventList[event_source_key]={"source_link":source_link,"timer":timer,"event_info":event_info}
+	eventList[event_source_key]={"source_link":source_link,"event_source_node":event_source_node,"timer":timer,"event_info":event_info}
 	
 	if(event_info.is_in_room):
 		eventList[event_source_key]["visitor"]=visitor
@@ -65,8 +65,8 @@ func add_to_eventList(room,event_info:EventInfo,timer:Timer)->void:
 
 
 func on_event_fail(event_source_key)->void:
-	if (eventList[event_source_key] as EventSource).active_scene == null :
-			(eventList[event_source_key] as EventSource).active_scene._cancel()
+	if eventList[event_source_key]['event_source_node'].active_scene != null :
+			(eventList[event_source_key]['event_source_node'] as EventSource).active_scene._cancel()
 
 	Stats.stars -=1
 

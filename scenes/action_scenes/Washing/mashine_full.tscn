@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw23myrccs8nc"]
+
+[ext_resource type="Texture2D" uid="uid://cgyexpxus0f7l" path="res://scenes/action_scenes/Washing/resources/washing_mashine_full.png" id="1_j55sq"]
+[ext_resource type="Script" path="res://scenes/action_scenes/Washing/mashine_full.gd" id="1_pr28o"]
+[ext_resource type="Texture2D" uid="uid://dwamhyft50buj" path="res://scenes/action_scenes/Washing/resources/full_tank.png" id="2_y0h3l"]
+[ext_resource type="Texture2D" uid="uid://bn5y3qjs0k3pr" path="res://scenes/action_scenes/Washing/resources/border_tank.png" id="3_ki2hi"]
+
+[node name="Mashine_full" type="Node2D"]
+script = ExtResource("1_pr28o")
+
+[node name="WashingMashine" type="Sprite2D" parent="."]
+texture = ExtResource("1_j55sq")
+
+[node name="FullTank" type="Sprite2D" parent="."]
+position = Vector2(0, 16)
+texture = ExtResource("2_y0h3l")
+
+[node name="BorderTank" type="Sprite2D" parent="."]
+texture = ExtResource("3_ki2hi")

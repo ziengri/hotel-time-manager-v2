@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpeqpckvsd3r4"]
+
+[ext_resource type="Script" path="res://scenes/components/navigation_arrow/navigation_arrow.gd" id="1_pm227"]
+[ext_resource type="Texture2D" uid="uid://diw3else277qv" path="res://assets/images/ui/arrow_pointing.png" id="2_5by5q"]
+
+[node name="NavigationArrow" type="Node2D"]
+script = ExtResource("1_pm227")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11, 0)
+texture = ExtResource("2_5by5q")

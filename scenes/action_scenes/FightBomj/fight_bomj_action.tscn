@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsxp4uo7rt0mk"]
+
+[ext_resource type="Script" path="res://scenes/components/action_scene/action_scene.gd" id="1_4umty"]
+[ext_resource type="PackedScene" uid="uid://ddp34gt1hbmc7" path="res://scenes/action_scenes/FightBomj/game.tscn" id="2_gcicd"]
+
+[node name="FightBomjAction" type="CanvasLayer"]
+script = ExtResource("1_4umty")
+
+[node name="game" parent="." instance=ExtResource("2_gcicd")]

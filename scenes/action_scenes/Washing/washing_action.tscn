@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjjmc183gk2f3"]
+
+[ext_resource type="Script" path="res://scenes/components/action_scene/action_scene.gd" id="1_ecqqw"]
+[ext_resource type="PackedScene" uid="uid://ddr2kc1w5a2im" path="res://scenes/action_scenes/Washing/game.tscn" id="2_lyl5s"]
+
+[node name="WashingAction" type="CanvasLayer"]
+script = ExtResource("1_ecqqw")
+
+[node name="game" parent="." instance=ExtResource("2_lyl5s")]

@@ -4805,6 +4805,7 @@ y_sort_enabled = true
 position = Vector2(459, 226)
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 y_sort_enabled = true
 position = Vector2(0, 2)
 tile_set = SubResource("TileSet_udaqg")
@@ -4817,7 +4818,7 @@ layer_1/tile_data = PackedInt32Array(458751, 524289, 22, 1441791, 327681, 22, 20
 [node name="Hud" parent="." instance=ExtResource("11_w2i7n")]
 
 [node name="TvReapir" type="Area2D" parent="."]
-position = Vector2(477, 225)
+position = Vector2(333, 458)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
@@ -4826,7 +4827,6 @@ event_key = "tv_repair"
 action_scene_path = ExtResource("10_3c6cc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TvReapir"]
-position = Vector2(-148, 245)
 shape = SubResource("CircleShape2D_xw41g")
 debug_color = Color(0.909804, 0, 0.729412, 0.419608)
 
@@ -4857,7 +4857,7 @@ shape = SubResource("CircleShape2D_xw41g")
 debug_color = Color(0.909804, 0, 0.729412, 0.419608)
 
 [node name="TvReapir2" type="Area2D" parent="."]
-position = Vector2(193, 233)
+position = Vector2(43, 465)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
@@ -4866,7 +4866,6 @@ event_key = "tv_repair"
 action_scene_path = ExtResource("10_3c6cc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TvReapir2"]
-position = Vector2(-152, 235)
 shape = SubResource("CircleShape2D_xw41g")
 debug_color = Color(0.909804, 0, 0.729412, 0.419608)
 
@@ -4915,3 +4914,5 @@ position = Vector2(613, 245)
 position = Vector2(170, 71)
 visitors_count = 4
 visitor_scene = ExtResource("13_hmuy5")
+
+[editable path="CharacterBody2D"]

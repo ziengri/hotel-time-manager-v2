@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bggdgl0dsa2lc"
+path="res://.godot/imported/Wash matching fast.mp3-86d07349c7c77c4380bd0da6214cf2b0.mp3str"
+
+[deps]
+
+source_file="res://scenes/action_scenes/Washing/resources/Wash matching fast.mp3"
+dest_files=["res://.godot/imported/Wash matching fast.mp3-86d07349c7c77c4380bd0da6214cf2b0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

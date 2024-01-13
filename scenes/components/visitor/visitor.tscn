@@ -215,7 +215,7 @@ process_priority = 1
 process_physics_priority = 1
 collision_mask = 3
 script = ExtResource("1_ek0k3")
-move_speed = 500.0
+move_speed = 5000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

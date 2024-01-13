@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvr14jjoua5nv"]
+
+[ext_resource type="Texture2D" uid="uid://cnregsw58pcfl" path="res://scenes/action_scenes/Washing/resources/washing_mashine.png" id="1_u1qpu"]
+
+[node name="WashingMashine" type="Sprite2D"]
+texture = ExtResource("1_u1qpu")
