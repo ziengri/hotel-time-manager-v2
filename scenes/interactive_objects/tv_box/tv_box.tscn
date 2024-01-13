@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ljhba38o876x"]
+
+[ext_resource type="TileSet" uid="uid://b3vkg2b3fbus" path="res://world_tileset/world.tres" id="1_1pcj3"]
+[ext_resource type="Script" path="res://scenes/components/event_source/event_source.gd" id="2_4rj31"]
+[ext_resource type="PackedScene" uid="uid://dosp6nurof5x" path="res://scenes/action_scenes/TVRepair/TVReapair_action.tscn" id="3_qu6nj"]
+
+[node name="TvBox" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_1pcj3")
+format = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+
+[node name="EventSource" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("2_4rj31")
+event_key = "tv_repair"
+action_scene_path = ExtResource("3_qu6nj")

@@ -5,5 +5,6 @@
 
 [node name="FightBomjAction" type="CanvasLayer"]
 script = ExtResource("1_4umty")
+physic_stop_reqired = true
 
 [node name="game" parent="." instance=ExtResource("2_gcicd")]
