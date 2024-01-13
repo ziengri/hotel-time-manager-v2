@@ -46,22 +46,22 @@ position = Vector2(577, 832)
 script = ExtResource("6_a532q")
 
 [node name="Marker2D" type="Marker2D" parent="Queue"]
-position = Vector2(657, 645)
+position = Vector2(643, 486)
 
 [node name="Marker2D3" type="Marker2D" parent="Queue"]
-position = Vector2(656, 622)
+position = Vector2(645, 516)
 
 [node name="Marker2D4" type="Marker2D" parent="Queue"]
-position = Vector2(657, 593)
+position = Vector2(647, 548)
 
 [node name="Marker2D5" type="Marker2D" parent="Queue"]
-position = Vector2(658, 563)
+position = Vector2(646, 579)
 
 [node name="Marker2D6" type="Marker2D" parent="Queue"]
-position = Vector2(657, 533)
+position = Vector2(647, 619)
 
 [node name="Marker2D2" type="Marker2D" parent="Queue"]
-position = Vector2(655, 672)
+position = Vector2(646, 664)
 
 [node name="ReceptionTable" parent="." instance=ExtResource("7_10qem")]
 position = Vector2(657, 703)

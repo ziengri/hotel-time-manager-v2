@@ -2,3 +2,6 @@ res://world_tileset/world_tilemap.tscn
 res://assets/themes/global.tres
 res://assets/themes/new_theme.tres
 res://world_tileset/world.tres
+res://scenes/player/player.tscn
+res://scenes/world/world2.tscn
+res://world_tileset/game_background.tres
