@@ -19,7 +19,7 @@ func _ready():
 func spawn_item()->void:
 	var trash_scenes : Array = DirAccess.open("res://scenes/action_scenes/RoomCleaning/trash/").get_files()
 	
-	var trash_new :BaseTrash = load("res://scenes/action_scenes/RoomCleaning/trash/"+trash_scenes.pick_random()).instantiate()
+	var trash_new :BaseTrash = load("res://scenes/action_scenes/RoomCleaning/trash/"+trash_scenes.pick_random().trim_suffix(".remap")).instantiate()
 	add_child(trash_new)
 	trash_new.item_clear.connect(on_item_clear)
 	#var max_y  =  trash_new.sprite.texture.get_height()

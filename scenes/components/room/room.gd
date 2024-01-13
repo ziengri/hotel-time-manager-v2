@@ -37,6 +37,7 @@ func _ready():
 
 func generate_event(visitor):
 	
+	print(EventManager.event_infos)
 	var random_key =EventManager.event_infos['room_events'].keys().pick_random()
 
 

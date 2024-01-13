@@ -9,15 +9,19 @@ signal event_list_added
 
 
 func _ready():
-	var event_types_path : String = "res://scenes/components/event_manager/events/"
-	var event_types : PackedStringArray =  DirAccess.open(event_types_path).get_directories()
-	print(event_types)
-	for event_type in event_types:
-		event_infos[event_type] = {}
-		for load_event_info in (DirAccess.open(event_types_path+event_type).get_files() as PackedStringArray):	
-			var event_info :EventInfo =load(event_types_path+event_type+"/"+load_event_info) as EventInfo
-			event_infos[event_type][event_info.event_key]=event_info
-	print(event_infos)
+	event_infos = { "other_events":{ "room_cleaning": load("res://scenes/components/event_manager/events/other_events/room_cleaning.tres") }, "room_events": { "need_food": load("res://scenes/components/event_manager/events/room_events/need_food.tres"),"tv_repair":load("res://scenes/components/event_manager/events/room_events/tv_reapair.tres") ,"wardrobe": load("res://scenes/components/event_manager/events/room_events/wardrobe.tres") } }
+	#var event_types_path : String = "res://scenes/components/event_manager/events/"
+	#var event_types : PackedStringArray =  DirAccess.open(event_types_path).get_directories()
+	#print(event_types)
+	#for event_type in event_types:
+		#event_infos[event_type] = {}
+		#for load_event_info in (DirAccess.open(event_types_path+event_type).get_files() as PackedStringArray):
+			#var event_info :EventInfo =load(event_types_path+event_type+"/"+load_event_info) as EventInfo
+#
+			#print(event_info)
+			#event_infos[event_type][event_info.event_key]=event_info
+			#print("евент")
+			#print(event_infos)
 			
 func add_event(source_link,event_source_key,event_info:EventInfo,visitor:CharacterBody2D = null)->void:
 	

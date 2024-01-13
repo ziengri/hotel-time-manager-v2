@@ -8,7 +8,7 @@
 size = Vector2(16, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xksx"]
-size = Vector2(17, 24)
+size = Vector2(53, 24)
 
 [node name="Coocking" type="Node2D"]
 
@@ -30,7 +30,7 @@ action_scene_path = ExtResource("2_n4vbj")
 status = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
-position = Vector2(-0.5, -2)
+position = Vector2(1.5, -2)
 shape = SubResource("RectangleShape2D_6xksx")
 debug_color = Color(0.898039, 0.184314, 0.631373, 0.419608)
 

@@ -5001,6 +5001,24 @@ texture = ExtResource("8_qovb6")
 8:14/0 = 0
 8:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:14/0/physics_layer_0/angular_velocity = 0.0
+3:22/0 = 0
+3:22/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:22/0/physics_layer_0/angular_velocity = 0.0
+3:21/0 = 0
+3:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:21/0/physics_layer_0/angular_velocity = 0.0
+4:21/0 = 0
+4:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:21/0/physics_layer_0/angular_velocity = 0.0
+4:22/0 = 0
+4:22/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:22/0/physics_layer_0/angular_velocity = 0.0
+4:23/0 = 0
+4:23/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:23/0/physics_layer_0/angular_velocity = 0.0
+3:23/0 = 0
+3:23/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:23/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdm6m"]
 texture = ExtResource("9_07txm")

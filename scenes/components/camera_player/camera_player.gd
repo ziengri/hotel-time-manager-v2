@@ -21,4 +21,4 @@ func on_event_list_added(event_in_list)->void:
 func event_list_removed(event_in_list)->void:
 	for arrow in get_children():
 		if arrow.event == event_in_list:
-			queue_free()
+			arrow.queue_free()

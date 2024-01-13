@@ -5,17 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://c5hgit2hnndij" path="res://scenes/action_scenes/reception_table/reception_table_action.tscn" id="3_1uq2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8f1e"]
-size = Vector2(48, 15)
+size = Vector2(48, 20)
 
 [node name="ReceptionTable" type="Node2D"]
 
 [node name="Table" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_vxqp4")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-24, 16, -40, 16, -40, -16, 40, -16, 40, 16, 24, 16, 24, 0, -24, 0)
+polygon = PackedVector2Array(-32, 16, -47, 16, -48, -20, 42, -20, 43, 16, 29, 16, 28, -2, -32, -3)
 
 [node name="EventSource" type="Area2D" parent="."]
 collision_layer = 4
@@ -26,6 +27,6 @@ action_scene_path = ExtResource("3_1uq2n")
 status = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
-position = Vector2(-1, -7.5)
+position = Vector2(-1, -10)
 shape = SubResource("RectangleShape2D_u8f1e")
 debug_color = Color(0.843137, 0.258824, 0.698039, 0.419608)

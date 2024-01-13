@@ -15,7 +15,7 @@ func _physics_process(delta):
 # Получаем ссылку на объект Camera2D
 	var this_target = target
 	if (event['event_info'] as EventInfo).event_key == "need_food":
-		if Stats.player.object_in_hands == Stats.player.ObjectHold.FOOD:
+		if Stats.player.object_in_hands != Stats.player.ObjectHold.FOOD:
 			this_target = get_tree().get_nodes_in_group("world")[0].get_node("Furnace")
 	if (event['event_info'] as EventInfo).event_key == "wardrobe":
 		if Stats.player.object_in_hands == Stats.player.ObjectHold.DIRTY:

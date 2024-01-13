@@ -203,7 +203,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(471.212, 252.952)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6rdd"]
-size = Vector2(10.9529, 14)
+size = Vector2(21, 14)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 collision_mask = 3
@@ -239,6 +239,7 @@ parameters/Idle/blend_position = Vector2(-0.0192, 0.0293159)
 parameters/Move/blend_position = Vector2(0.0080142, 0.718062)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -20.0
 offset_top = -36.0
 offset_right = 20.0
@@ -267,6 +268,5 @@ collision_mask = 4
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
-position = Vector2(5.52355, -4.17233e-07)
+position = Vector2(5.5, 1)
 shape = SubResource("RectangleShape2D_g6rdd")
