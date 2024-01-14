@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://2yo7qu0fv4f2"]
+
+[ext_resource type="PackedScene" uid="uid://c4l4qvwa5wy4l" path="res://world_tileset/world_tilemap.tscn" id="1_xv4l2"]
+[ext_resource type="TileSet" uid="uid://cdr0b5t84d1bl" path="res://world_tileset/world_new.tres" id="2_8mreh"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_cqmbw"]
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="WorldPathfinding" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_xv4l2")]
+tile_set = ExtResource("2_8mreh")
+navigation_visibility_mode = 1
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_cqmbw")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(0, 0)

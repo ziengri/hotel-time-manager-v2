@@ -21,11 +21,11 @@ func physics_procces(delta: float)->int:
 		return State.NULL
 	
 	if queue.queue_hotel[queue_number]["visitor"] == null:
-		player.path = world.find_path(tile_map.local_to_map(player.position),queue.queue_hotel[queue_number]["pos"])
+		player.path = world.find_path(player.global_position,queue.queue_hotel[queue_number]["pos"])
 		queue.queue_hotel[queue_number]["visitor"] = player
 		State.NULL
 	
-	if queue.queue_hotel[queue_number+1]["visitor"] == null and tile_map.local_to_map(player.position) == queue.queue_hotel[queue_number]["pos"]:
+	if queue.queue_hotel[queue_number+1]["visitor"] == null and tile_map.local_to_map(player.position) == tile_map.local_to_map(queue.queue_hotel[queue_number]["pos"]):
 		change_in_queue()
 
 	
@@ -33,7 +33,7 @@ func physics_procces(delta: float)->int:
 
 
 func change_in_queue():
-	player.path = world.find_path(tile_map.local_to_map(player.position),queue.queue_hotel[queue_number+1]["pos"])
+	player.path = world.find_path(player.global_position,queue.queue_hotel[queue_number+1]["pos"])
 	queue_number += 1
 	queue.queue_hotel[queue_number-1]["visitor"] = null
 	queue.queue_hotel[queue_number]["visitor"] = player

@@ -1,0 +1,114 @@
+[gd_scene load_steps=17 format=3 uid="uid://dateb4p2gwepj"]
+
+[ext_resource type="Script" path="res://scenes/components/visitor/visitor.gd" id="1_1j4fg"]
+[ext_resource type="Texture2D" uid="uid://bjtljh65pn1qa" path="res://assets/images/visitors/visitor2.png" id="2_yi0nj"]
+[ext_resource type="Script" path="res://addons/behaviour_toolkit/behaviour_tree/bt_root.gd" id="3_v5ps2"]
+[ext_resource type="Script" path="res://addons/behaviour_toolkit/behaviour_tree/composites/bt_sequence.gd" id="4_77wqv"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/Queue_composite.gd" id="5_b10ct"]
+[ext_resource type="Script" path="res://addons/behaviour_toolkit/behaviour_tree/leaves/leaf_print.gd" id="5_urjsr"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/InLastQueue_leaf.gd" id="6_7ihhv"]
+[ext_resource type="Script" path="res://addons/behaviour_toolkit/finite_state_machine/fsm.gd" id="7_12i1e"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/StartQueue_leaf.gd" id="7_cp547"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/MoveInQueue_leaf.gd" id="8_l585u"]
+[ext_resource type="Script" path="res://addons/behaviour_toolkit/behaviour_tree/leaves/leaf_wait.gd" id="8_q4yoc"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/IDLE_STATE.gd" id="9_uy3qi"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/onStartWalking_trans.gd" id="10_i7cbc"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/WALK_STATE.gd" id="11_ccrcv"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/onStartIdle_trans.gd" id="12_1ni1c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxs5x"]
+size = Vector2(7, 7.5)
+
+[node name="Visitor" type="CharacterBody2D" node_paths=PackedStringArray("state_machine", "behaviour_tree")]
+process_mode = 1
+process_priority = 1
+process_physics_priority = 1
+collision_mask = 3
+script = ExtResource("1_1j4fg")
+state_machine = NodePath("StateMachine")
+behaviour_tree = NodePath("BTRoot")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -16)
+texture = ExtResource("2_yi0nj")
+hframes = 6
+vframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 5
+visibility_layer = 5
+position = Vector2(0, -7.25)
+shape = SubResource("RectangleShape2D_cxs5x")
+
+[node name="BTRoot" type="Node" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("3_v5ps2")
+autostart = true
+actor = NodePath("..")
+
+[node name="Master" type="Node" parent="BTRoot"]
+script = ExtResource("4_77wqv")
+
+[node name="Queue" type="Node" parent="BTRoot/Master"]
+script = ExtResource("5_b10ct")
+
+[node name="LeafPrint" type="Node" parent="BTRoot/Master/Queue"]
+script = ExtResource("5_urjsr")
+custom_text = "Я встаю в очередь последним"
+
+[node name="StartQueue" type="Node" parent="BTRoot/Master/Queue"]
+script = ExtResource("7_cp547")
+
+[node name="LeafPrint4" type="Node" parent="BTRoot/Master/Queue"]
+script = ExtResource("5_urjsr")
+custom_text = "Я встал в очередь "
+
+[node name="MoveInQueue" type="Node" parent="BTRoot/Master/Queue"]
+script = ExtResource("8_l585u")
+
+[node name="LeafPrint2" type="Node" parent="BTRoot/Master/Queue"]
+script = ExtResource("5_urjsr")
+custom_text = "Я последний в очереди"
+
+[node name="InLastQueue" type="Node" parent="BTRoot/Master/Queue"]
+script = ExtResource("6_7ihhv")
+
+[node name="LeafPrint3" type="Node" parent="BTRoot/Master/Queue"]
+script = ExtResource("5_urjsr")
+custom_text = "Я прошел очередь"
+
+[node name="LeafPrint" type="Node" parent="BTRoot/Master"]
+script = ExtResource("5_urjsr")
+custom_text = "ИИ Очередь закончена"
+
+[node name="LeafWait" type="Node" parent="BTRoot/Master"]
+script = ExtResource("8_q4yoc")
+wait_for_ticks = 1000
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "actor")]
+script = ExtResource("7_12i1e")
+autostart = true
+initial_state = NodePath("IDLE")
+actor = NodePath("..")
+
+[node name="IDLE" type="Node" parent="StateMachine"]
+script = ExtResource("9_uy3qi")
+
+[node name="onStartWalking" type="Node" parent="StateMachine/IDLE" node_paths=PackedStringArray("next_state")]
+script = ExtResource("10_i7cbc")
+next_state = NodePath("../../WALK")
+use_event = true
+event = "start_walking"
+
+[node name="WALK" type="Node" parent="StateMachine"]
+script = ExtResource("11_ccrcv")
+
+[node name="onStartIdle" type="Node" parent="StateMachine/WALK" node_paths=PackedStringArray("next_state")]
+script = ExtResource("12_1ni1c")
+next_state = NodePath("../../IDLE")
+use_event = true
+event = "start_idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0

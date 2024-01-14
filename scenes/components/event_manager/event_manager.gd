@@ -44,10 +44,7 @@ func add_event(source_link,event_source_key,event_info:EventInfo,visitor:Charact
 
 
 
-func finish_event(event_source_key)->void:
-	if eventList[event_source_key]["visitor"] != null:
-		eventList[event_source_key]["visitor"].states.change_state(BaseStateVisitor.State.IDLEEVENT) 
-		
+func finish_event(event_source_key)->void:	
 	event_list_removed.emit(eventList[event_source_key])
 	give_reward((eventList[event_source_key]["event_info"] as EventInfo).reward)
 	remove_event_from_list(event_source_key)
@@ -55,7 +52,8 @@ func finish_event(event_source_key)->void:
 
 
 func remove_event_from_list(event_source_key)->void:
-
+	if eventList[event_source_key]["visitor"] != null:
+		eventList[event_source_key]["visitor"].is_event_active = false 
 	var event_timer : Timer = eventList[event_source_key]['timer']
 	event_timer.timeout.disconnect(on_event_fail) 
 	event_timer.queue_free()

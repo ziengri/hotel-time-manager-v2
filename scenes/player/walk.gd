@@ -12,7 +12,7 @@ func physics_procces(delta: float)->int:
 	
 	if input_vector == Vector2.ZERO: return State.IDLE
 	
-	print(input_vector)
+	#print(input_vector)
 	#Обновление параметров анимации
 	player.update_blend_position(input_vector) 
 	
