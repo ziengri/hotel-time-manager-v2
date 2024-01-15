@@ -1,3 +1,5 @@
+res://assets/images/character/bodies
+C:/Users/komputer/Documents/hotelv2_export
 res://assets/images/ui
 res://scenes/action_scenes/TVRepair
 res://scenes/components/event_manager
@@ -10,5 +12,4 @@ res://assets/images/visitors
 res://assets/fonts
 res://scenes/components/visitor
 res://assets/images/player
-res://scenes/components/state_machine/player
 res://tests/game

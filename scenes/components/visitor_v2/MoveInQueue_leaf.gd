@@ -5,7 +5,7 @@ extends BTLeaf
 # Gets called every tick of the behavior tree
 func tick(_delta: float, _actor: Node, _blackboard: Blackboard) -> BTStatus:
 	#Назначени первой очереди
-	if _actor.target_path != []:
+	if (_actor as VisitorCharacter).target_path != []:
 		#print("Иду к точке")
 		return BTStatus.RUNNING
 	
@@ -17,7 +17,7 @@ func tick(_delta: float, _actor: Node, _blackboard: Blackboard) -> BTStatus:
 		Rel.queue.queue_hotel[queue_composite.queue_number]['visitor'] =  null
 		queue_composite.queue_number += 1
 		#print('Теперь я на',queue_composite.queue_number+1)
-		_actor.target_path = Rel.world.find_path(_actor.global_position,Rel.queue.queue_hotel[queue_composite.queue_number]['pos'])
+		(_actor as VisitorCharacter).target_path = Rel.world.find_path(_actor.global_position,Rel.queue.queue_hotel[queue_composite.queue_number]['pos'])
 		return BTStatus.RUNNING
 	else:
 		return BTStatus.RUNNING

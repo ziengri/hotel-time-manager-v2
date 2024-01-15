@@ -7,4 +7,5 @@ func tick(_delta: float, _actor: Node, _blackboard: Blackboard) -> BTStatus:
 		return BTStatus.RUNNING
 	else:
 		Rel.queue.queue_hotel[queue_composite.queue_number]['visitor'] = null
+		(_actor as VisitorCharacter).target_path = Rel.world.find_path(_actor.global_position,_actor.room.global_position)
 		return BTStatus.SUCCESS

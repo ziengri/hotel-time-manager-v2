@@ -12,16 +12,17 @@ size = Vector2(27, 25)
 
 [node name="WardrobeObject" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(1, -13)
+position = Vector2(8, 2)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.5, 3)
 shape = SubResource("RectangleShape2D_x4o73")
 
 [node name="EventSource" type="Area2D" parent="."]
 z_index = 1
+position = Vector2(0, -10)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
@@ -30,12 +31,12 @@ event_key = "wardrobe"
 action_scene_path = ExtResource("4_j4j6s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
-position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_npf5d")
 debug_color = Color(0.858824, 0.278431, 0.603922, 0.419608)
 
 [node name="Sprite" type="TileMap" parent="."]
 y_sort_enabled = true
+position = Vector2(0, -10)
 tile_set = ExtResource("2_ealka")
 format = 2
 layer_0/y_sort_enabled = true

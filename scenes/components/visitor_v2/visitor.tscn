@@ -1,24 +1,23 @@
-[gd_scene load_steps=21 format=3 uid="uid://dateb4p2gwepj"]
+[gd_scene load_steps=20 format=3 uid="uid://dateb4p2gwepj"]
 
 [ext_resource type="Script" path="res://scenes/components/visitor/visitor.gd" id="1_1j4fg"]
 [ext_resource type="Texture2D" uid="uid://bjtljh65pn1qa" path="res://assets/images/visitors/visitor2.png" id="2_yi0nj"]
 [ext_resource type="Script" path="res://addons/behaviour_toolkit/behaviour_tree/bt_root.gd" id="3_v5ps2"]
 [ext_resource type="Script" path="res://addons/behaviour_toolkit/behaviour_tree/composites/bt_sequence.gd" id="4_77wqv"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/Master_composite.gd" id="4_sulpk"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/Queue_composite.gd" id="5_b10ct"]
 [ext_resource type="Script" path="res://addons/behaviour_toolkit/behaviour_tree/leaves/leaf_print.gd" id="5_urjsr"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/InLastQueue_leaf.gd" id="6_7ihhv"]
 [ext_resource type="Script" path="res://addons/behaviour_toolkit/finite_state_machine/fsm.gd" id="7_12i1e"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/StartQueue_leaf.gd" id="7_cp547"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/MoveInQueue_leaf.gd" id="8_l585u"]
-[ext_resource type="Script" path="res://addons/behaviour_toolkit/behaviour_tree/leaves/leaf_wait.gd" id="8_q4yoc"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/IDLE_STATE.gd" id="9_uy3qi"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/onStartWalking_trans.gd" id="10_i7cbc"]
-[ext_resource type="Script" path="res://scenes/components/visitor_v2/setPathToRoom_leaf.gd" id="10_l23ex"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/WALK_STATE.gd" id="11_ccrcv"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/MoveInRoom_leaf.gd" id="11_nvqlm"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/onStartIdle_trans.gd" id="12_1ni1c"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/InRoomEvents_leaf.gd" id="12_jldbl"]
-[ext_resource type="Script" path="res://scenes/components/visitor_v2/InRoomEvents_decorator.gd" id="12_rto5r"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/Exit_leaf.gd" id="14_gcept"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxs5x"]
 size = Vector2(7, 7.5)
@@ -27,7 +26,9 @@ size = Vector2(7, 7.5)
 process_mode = 1
 process_priority = 1
 process_physics_priority = 1
-collision_mask = 3
+collision_layer = 2
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_1j4fg")
 state_machine = NodePath("StateMachine")
 behaviour_tree = NodePath("BTRoot")
@@ -51,7 +52,7 @@ autostart = true
 actor = NodePath("..")
 
 [node name="Master" type="Node" parent="BTRoot"]
-script = ExtResource("4_77wqv")
+script = ExtResource("4_sulpk")
 
 [node name="Queue" type="Node" parent="BTRoot/Master"]
 script = ExtResource("5_b10ct")
@@ -72,22 +73,14 @@ custom_text = "ИИ Очередь закончена"
 [node name="Room" type="Node" parent="BTRoot/Master"]
 script = ExtResource("4_77wqv")
 
-[node name="setPathToRoom" type="Node" parent="BTRoot/Master/Room"]
-script = ExtResource("10_l23ex")
-
 [node name="MoveInRoom" type="Node" parent="BTRoot/Master/Room"]
 script = ExtResource("11_nvqlm")
 
 [node name="InRoomEvents" type="Node" parent="BTRoot/Master/Room"]
-script = ExtResource("12_rto5r")
-on_limit = 0
-
-[node name="InRoomEvents2" type="Node" parent="BTRoot/Master/Room"]
 script = ExtResource("12_jldbl")
 
-[node name="LeafWait" type="Node" parent="BTRoot/Master"]
-script = ExtResource("8_q4yoc")
-wait_for_ticks = 1000
+[node name="Exit" type="Node" parent="BTRoot/Master"]
+script = ExtResource("14_gcept")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "actor")]
 script = ExtResource("7_12i1e")
