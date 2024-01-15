@@ -5,7 +5,7 @@ class_name World
 @onready var AStarGrid: AStarGrid2D = AStarGrid2D.new()
 @onready var queue = $Queue
 
-var event: FmodEvent = null
+
 
 func _init():
 	Rel.world = self

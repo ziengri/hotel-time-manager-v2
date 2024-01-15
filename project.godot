@@ -43,7 +43,6 @@ ScreenshotMgr="*res://utils/screenshot_mgr.tscn"
 Stats="*res://scenes/player/Stats.gd"
 EventManager="*res://scenes/components/event_manager/event_manager.gd"
 Rel="*res://scenes/world/rel.gd"
-FmodManager="*res://addons/fmod/FmodManager.gd"
 
 [debug]
 
@@ -59,7 +58,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/behaviour_toolkit/plugin.cfg", "res://addons/fmod/plugin.cfg")
+enabled=PackedStringArray("res://addons/behaviour_toolkit/plugin.cfg")
 
 [global]
 

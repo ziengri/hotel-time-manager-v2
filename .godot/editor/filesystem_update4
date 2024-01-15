@@ -1,9 +1,10 @@
-res://world_tileset/world_tilemap.tscn
+res://scenes/world/game_master.tscn
 res://world_tileset/world.tres
+res://world_tileset/world_new.tres
 res://world_tileset/game_background.tres
 res://assets/themes/global.tres
 res://assets/themes/new_theme.tres
-res://scenes/action_scenes/cooking_food/game.gd
-res://scenes/player/player.tscn
-res://scenes/world/world2.tscn
-res://scenes/action_scenes/cooking_food/game.tscn
+res://scenes/world/world.gd
+res://scenes/world/test.tscn
+res://scenes/world/test.gd
+res://scenes/world/spawner/spawner.gd

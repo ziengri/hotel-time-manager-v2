@@ -4,6 +4,3 @@
 
 [node name="test" type="Node2D"]
 script = ExtResource("1_2a3tv")
-
-[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
-bank_paths = ["res://assets/audio/banks/Desktop/Master.strings.bank", "res://assets/audio/banks/Desktop/Master.bank"]

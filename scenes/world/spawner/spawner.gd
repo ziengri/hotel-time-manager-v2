@@ -10,7 +10,10 @@ var visitors_sprite_path:String = "res://assets/images/visitors/"
 @onready var texture_array :Array = DirAccess.open(visitors_sprite_path).get_files()
 # Called when the node enters the scene tree for the first time.
 func _ready()->void:
+	
 	#print(DirAccess.open(visitors_sprite_path).get_files())
+
+
 	timer.timeout.connect(spawn_visitor)
 	#timer.wait_time = 10
 	timer.wait_time = randi_range(1,3)
@@ -19,7 +22,6 @@ func _ready()->void:
 func spawn_visitor()->void:
 	if(visitors_count>0):
 		print("SPAWN VISITOR")
-		FmodServer.play_one_shot("event:/visitor_entered",self)
 		var visitor : VisitorCharacter = visitor_scene.instantiate() as VisitorCharacter
 		#print_debug("СДЕЛАЙ НОРМАЛЬНЫЙ РАНДОМ")
 		#visitor.visitor_sprite = load(visitors_sprite_path+(texture_array.pick_random()).trim_suffix(".import"))
