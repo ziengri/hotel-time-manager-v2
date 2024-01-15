@@ -5,6 +5,8 @@ class_name World
 @onready var AStarGrid: AStarGrid2D = AStarGrid2D.new()
 @onready var queue = $Queue
 
+var event: FmodEvent = null
+
 func _init():
 	Rel.world = self
 
@@ -16,29 +18,11 @@ func _ready():
 #Ищет ближайщий путь от точки до точки по Навигацционной карте 
 func find_path(source_global_position: Vector2, target_global_position: Vector2,filtering:bool = true) -> Array:
 	var path: Array = AStarGrid.get_id_path( nav_map.local_to_map(source_global_position),nav_map.local_to_map(target_global_position) )
-	
-	if(filtering):return filter_path(path)
-	else:return path
+	var global_paths = []
+	for p in path:
+		global_paths.append(nav_map.map_to_local(p))
+	return global_paths
 
-#Фильтрует путь сохраняя только точки где меняеться направление
-func filter_path(input_path):
-	var filtered_path = []
-
-	if input_path.size() < 2:
-		return filtered_path
-
-	filtered_path.append(nav_map.map_to_local(input_path[0]))
-
-	for i in range(1, input_path.size() - 1):
-		var current_direction = input_path[i] - input_path[i - 1]
-		var next_direction = input_path[i + 1] - input_path[i]
-
-		if current_direction != next_direction:
-			filtered_path.append(nav_map.map_to_local(input_path[i]))
-
-	filtered_path.append(nav_map.map_to_local( input_path[input_path.size() - 1]))
-
-	return filtered_path
 
 
 func init_AstarGrid() -> void:
@@ -47,6 +31,7 @@ func init_AstarGrid() -> void:
 	AStarGrid.cell_size = Vector2(8,8)
 	AStarGrid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 	AStarGrid.default_estimate_heuristic = 1
+	AStarGrid.jumping_enabled = true
 	AStarGrid.update()
 	print(AStarGrid.region)
 

@@ -6,9 +6,8 @@ extends BTLeaf
 func tick(_delta: float, _actor: Node, _blackboard: Blackboard) -> BTStatus:
 	#Назначени первой очереди
 	if Rel.queue.queue_hotel[0]['visitor'] == null:
-		queue_composite.queue_number = 0
 		Rel.queue.queue_hotel[0]['visitor'] =  _actor
-		
+		queue_composite.queue_number = 0
 		_actor.target_path = Rel.world.find_path(_actor.global_position,Rel.queue.queue_hotel[0]['pos'])
 		return BTStatus.SUCCESS
 	else:

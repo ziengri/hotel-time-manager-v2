@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dateb4p2gwepj"]
+[gd_scene load_steps=21 format=3 uid="uid://dateb4p2gwepj"]
 
 [ext_resource type="Script" path="res://scenes/components/visitor/visitor.gd" id="1_1j4fg"]
 [ext_resource type="Texture2D" uid="uid://bjtljh65pn1qa" path="res://assets/images/visitors/visitor2.png" id="2_yi0nj"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/MoveInRoom_leaf.gd" id="11_nvqlm"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/onStartIdle_trans.gd" id="12_1ni1c"]
 [ext_resource type="Script" path="res://scenes/components/visitor_v2/InRoomEvents_leaf.gd" id="12_jldbl"]
+[ext_resource type="Script" path="res://scenes/components/visitor_v2/InRoomEvents_decorator.gd" id="12_rto5r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxs5x"]
 size = Vector2(7, 7.5)
@@ -78,6 +79,10 @@ script = ExtResource("10_l23ex")
 script = ExtResource("11_nvqlm")
 
 [node name="InRoomEvents" type="Node" parent="BTRoot/Master/Room"]
+script = ExtResource("12_rto5r")
+on_limit = 0
+
+[node name="InRoomEvents2" type="Node" parent="BTRoot/Master/Room"]
 script = ExtResource("12_jldbl")
 
 [node name="LeafWait" type="Node" parent="BTRoot/Master"]

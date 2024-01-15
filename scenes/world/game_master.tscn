@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://oqsypcnb1mjh"]
+
+[ext_resource type="Script" path="res://scenes/world/GameMaster.gd" id="1_5a3qw"]
+[ext_resource type="PackedScene" uid="uid://dnug67r0vsq8o" path="res://scenes/world/world2.tscn" id="2_a6pgl"]
+
+[node name="GameMaster" type="Node2D"]
+script = ExtResource("1_5a3qw")
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://assets/audio/banks/Desktop/Music.bank"]
+
+[node name="World2" parent="." instance=ExtResource("2_a6pgl")]
+
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/start_world"
+event_guid = "{46527780-7fa5-44c0-af39-22c976e13948}"
+attached = false
+autoplay = true
+allow_fadeout = false

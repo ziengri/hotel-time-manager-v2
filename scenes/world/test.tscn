@@ -1,30 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://i3ftmrwexp05"]
+[gd_scene load_steps=2 format=3 uid="uid://i3ftmrwexp05"]
 
 [ext_resource type="Script" path="res://scenes/world/test.gd" id="1_2a3tv"]
-[ext_resource type="Texture2D" uid="uid://2inx2hq0l16o" path="res://icon.png" id="1_n3tkl"]
-[ext_resource type="PackedScene" uid="uid://dateb4p2gwepj" path="res://scenes/components/visitor_v2/visitor.tscn" id="1_r6dol"]
-[ext_resource type="Script" path="res://scenes/world/queue.gd" id="3_i05a6"]
 
 [node name="test" type="Node2D"]
 script = ExtResource("1_2a3tv")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(325, 178.5)
-scale = Vector2(10.4063, 5.76563)
-texture = ExtResource("1_n3tkl")
-
-[node name="Visitor" parent="." instance=ExtResource("1_r6dol")]
-position = Vector2(226, 145)
-move_speed = 100.0
-
-[node name="Queue" type="Node" parent="."]
-script = ExtResource("3_i05a6")
-
-[node name="Marker2D" type="Marker2D" parent="Queue"]
-position = Vector2(346, 127)
-
-[node name="Marker2D2" type="Marker2D" parent="Queue"]
-position = Vector2(347, 170)
-
-[node name="Marker2D3" type="Marker2D" parent="Queue"]
-position = Vector2(348, 220)
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://assets/audio/banks/Desktop/Master.strings.bank", "res://assets/audio/banks/Desktop/Master.bank"]
