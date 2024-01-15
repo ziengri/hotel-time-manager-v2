@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{d10a5393-ffe4-4c4a-86e3-e01a6ccbc380}">
-		<property name="assetPath" />
+	<object class="AudioFile" id="{ebfefaf0-1dca-4d4a-bbc8-d8559b50a1b5}">
+		<property name="assetPath">
+			<value>Door bell.wav</value>
+		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
 		</property>
