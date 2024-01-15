@@ -19,6 +19,7 @@ func _ready()->void:
 func spawn_visitor()->void:
 	if(visitors_count>0):
 		print("SPAWN VISITOR")
+		FmodServer.play_one_shot("event:/visitor_entered",self)
 		var visitor : VisitorCharacter = visitor_scene.instantiate() as VisitorCharacter
 		#print_debug("СДЕЛАЙ НОРМАЛЬНЫЙ РАНДОМ")
 		#visitor.visitor_sprite = load(visitors_sprite_path+(texture_array.pick_random()).trim_suffix(".import"))

@@ -39,6 +39,9 @@ sources/0 = SubResource("TileSetAtlasSource_bukxi")
 y_sort_enabled = true
 script = ExtResource("1_ba1sf")
 
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://assets/audio/banks/Desktop/Master.bank", "res://assets/audio/banks/Desktop/Master.strings.bank"]
+
 [node name="Line2D" type="Line2D" parent="."]
 visible = false
 width = 5.0
