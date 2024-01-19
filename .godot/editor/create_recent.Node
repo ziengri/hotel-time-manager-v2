@@ -1,6 +1,9 @@
+Sprite2D
+AnimationPlayer
+LineEdit
+Button
 CharacterBody2D
 AnimatedSprite2D
-Sprite2D
 ColorRect
 ActionScene
 CollisionShape2D

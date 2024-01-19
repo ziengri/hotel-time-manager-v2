@@ -13,8 +13,13 @@ func _on_update(_delta: float, _actor: Node, _blackboard: Blackboard) -> void:
 	if(actor.target_path == []):
 		return
 	
-	var direction:Vector2 = ( Vector2(actor.target_path[0]) - actor.global_position).normalized()
-	actor.velocity = direction*actor.move_speed
+	actor.direction = ( Vector2(actor.target_path[0]) - actor.global_position).normalized()
+
+
+
+	
+
+	actor.velocity = actor.direction*actor.move_speed
 	actor.move_and_slide()
 
 

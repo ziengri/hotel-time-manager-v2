@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b604lbb6j7334"
+path="res://.godot/imported/kitchen_stove_on.aseprite-88af63dfd040cd8c4f9ddfc9ff2debfa.res"
+
+[deps]
+
+source_file="res://scenes/action_scenes/cooking_food/resourses/kitchen_stove_on.aseprite"
+dest_files=["res://.godot/imported/kitchen_stove_on.aseprite-88af63dfd040cd8c4f9ddfc9ff2debfa.res"]
+
+[params]
+

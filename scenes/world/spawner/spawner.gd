@@ -3,11 +3,16 @@ class_name Spawner
 
 @export var visitors_count : int  = 1
 @onready var timer :Timer = $Timer
-
 @export var visitor_scene :PackedScene
-
 var visitors_sprite_path:String = "res://assets/images/visitors/"
 @onready var texture_array :Array = DirAccess.open(visitors_sprite_path).get_files()
+
+
+var bodies :Array = filter_paths(DirAccess.get_files_at("res://assets/images/character/bodies/"))
+var outfits :Array = filter_paths(DirAccess.get_files_at("res://assets/images/character/outfits/"))
+var hairs :Array = filter_paths(DirAccess.get_files_at("res://assets/images/character/hairs/"))
+var eyes :Array = filter_paths(DirAccess.get_files_at("res://assets/images/character/eyes/"))
+
 # Called when the node enters the scene tree for the first time.
 func _ready()->void:
 	
@@ -36,3 +41,12 @@ func spawn_visitor()->void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+func filter_paths(unfiltered_paths:Array)->Array:
+	var filtered_paths :Array = []
+
+	for i in range(0,unfiltered_paths.size()):
+		if unfiltered_paths[i].rfind(".import")==-1:
+			filtered_paths.append(unfiltered_paths[i])
+	
+	return filtered_paths
+	
