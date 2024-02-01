@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://df3qdpv3i48ec"]
+[gd_scene load_steps=7 format=3 uid="uid://df3qdpv3i48ec"]
 
 [ext_resource type="Texture2D" uid="uid://dlexl6pgt6rlp" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/3_Bathroom_16x16.png" id="1_mskbo"]
 [ext_resource type="Script" path="res://scenes/interactive_objects/washing_machine/washing_machine_eventsource.gd" id="2_ma163"]
 [ext_resource type="PackedScene" uid="uid://bjjmc183gk2f3" path="res://scenes/action_scenes/Washing/washing_action.tscn" id="3_4q74m"]
+[ext_resource type="Resource" uid="uid://c1bsndtdjrj7j" path="res://scenes/components/event_manager/events/other_events/washing_machine.tres" id="4_f2ldc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_361nn"]
 size = Vector2(20, 7)
@@ -31,9 +32,9 @@ collision_layer = 4
 collision_mask = 0
 monitoring = false
 script = ExtResource("2_ma163")
-event_key = "washing_machine"
-action_scene_path = ExtResource("3_4q74m")
 status = 0
+action_scene_path = ExtResource("3_4q74m")
+event_info = ExtResource("4_f2ldc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
 position = Vector2(1, -12)

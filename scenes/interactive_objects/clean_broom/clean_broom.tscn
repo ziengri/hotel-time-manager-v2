@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cevvp25pfl1kv"]
+[gd_scene load_steps=7 format=3 uid="uid://cevvp25pfl1kv"]
 
 [ext_resource type="Texture2D" uid="uid://bhxms4sff0bhq" path="res://assets/images/tilesets/objects/broom.png" id="1_8gxfd"]
 [ext_resource type="Script" path="res://scenes/components/event_source/event_source.gd" id="1_koy0c"]
 [ext_resource type="PackedScene" uid="uid://dx8efvbosmrlr" path="res://scenes/action_scenes/RoomCleaning/room_cleaning_action.tscn" id="3_l33v3"]
+[ext_resource type="Resource" uid="uid://d1f12bybfjune" path="res://scenes/components/event_manager/events/other_events/room_cleaning.tres" id="4_88e3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s53vs"]
 size = Vector2(11, 5.25)
@@ -32,8 +33,8 @@ collision_layer = 4
 collision_mask = 0
 monitoring = false
 script = ExtResource("1_koy0c")
-event_key = "room_cleaning"
 action_scene_path = ExtResource("3_l33v3")
+event_info = ExtResource("4_88e3m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
 position = Vector2(-3, -1)

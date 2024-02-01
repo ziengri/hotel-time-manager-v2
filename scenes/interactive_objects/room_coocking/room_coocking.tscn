@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://6qd1ncvgf2ev"]
+[gd_scene load_steps=7 format=3 uid="uid://6qd1ncvgf2ev"]
 
 [ext_resource type="Script" path="res://scenes/components/event_source/event_source.gd" id="1_anxw8"]
 [ext_resource type="PackedScene" uid="uid://lpmu3uvsehpd" path="res://scenes/action_scenes/cooking_food/cooking_action.tscn" id="2_n4vbj"]
 [ext_resource type="Texture2D" uid="uid://bi7bg248a5ejm" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/12_Kitchen_16x16.png" id="3_6rng7"]
+[ext_resource type="Resource" uid="uid://bgny2oy3elnv5" path="res://scenes/components/event_manager/events/other_events/furnace.tres" id="3_mibyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s53vs"]
 size = Vector2(16, 17)
@@ -25,9 +26,9 @@ collision_layer = 4
 collision_mask = 0
 monitoring = false
 script = ExtResource("1_anxw8")
-event_key = "cocking_food"
-action_scene_path = ExtResource("2_n4vbj")
 status = 0
+action_scene_path = ExtResource("2_n4vbj")
+event_info = ExtResource("3_mibyd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
 position = Vector2(1.5, -2)

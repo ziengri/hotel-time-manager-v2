@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventInfo" load_steps=2 format=3 uid="uid://c1bsndtdjrj7j"]
+
+[ext_resource type="Script" path="res://scenes/components/event_manager/event_resource.gd" id="1_ittow"]
+
+[resource]
+script = ExtResource("1_ittow")
+event_key = "room_cleaning"
+description = "Почитсти комнату"
+time_to_event = 0
+reward = 0
+is_in_room = true

@@ -25,16 +25,14 @@ func _ready():
 
 
 func _finish()->void:
-	if physic_stop_reqired : Stats.player.set_physics_process(true)
 	finished.emit()
 
 func _cancel()->void:
-	if physic_stop_reqired : Stats.player.set_physics_process(true)
 	canceled.emit()
 
 
 func _fail()->void:
-	if physic_stop_reqired:Stats.player.set_physics_process(true)
 	failed.emit()
 
-
+func _exit_tree():
+	if physic_stop_reqired:Stats.player.set_physics_process(true)

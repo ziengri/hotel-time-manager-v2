@@ -6,6 +6,6 @@
 script = ExtResource("1_ncff1")
 event_key = "need_food"
 description = "Приготовь еду"
-time_to_event = 150
+time_to_event = 40
 reward = 12
 is_in_room = true

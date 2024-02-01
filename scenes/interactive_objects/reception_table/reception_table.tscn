@@ -23,8 +23,8 @@ collision_layer = 4
 collision_mask = 0
 monitoring = false
 script = ExtResource("2_ra5up")
-action_scene_path = ExtResource("3_1uq2n")
 status = 0
+action_scene_path = ExtResource("3_1uq2n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
 position = Vector2(-1, -10)

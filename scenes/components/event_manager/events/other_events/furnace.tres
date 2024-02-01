@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventInfo" load_steps=2 format=3 uid="uid://bgny2oy3elnv5"]
+
+[ext_resource type="Script" path="res://scenes/components/event_manager/event_resource.gd" id="1_4bs8f"]
+
+[resource]
+script = ExtResource("1_4bs8f")
+event_key = "furnace"
+description = "Плита для жарки"
+time_to_event = 0
+reward = 0
+is_in_room = false

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhqvf0tauinsi"]
+[gd_scene load_steps=7 format=3 uid="uid://dhqvf0tauinsi"]
 
 [ext_resource type="TileSet" uid="uid://b3vkg2b3fbus" path="res://world_tileset/world.tres" id="2_ealka"]
 [ext_resource type="Script" path="res://scenes/components/event_source/event_source.gd" id="2_vnap7"]
+[ext_resource type="Resource" uid="uid://pfuevpi5l35d" path="res://scenes/components/event_manager/events/room_events/wardrobe.tres" id="3_o14om"]
 [ext_resource type="PackedScene" uid="uid://chhaclw00ea4t" path="res://scenes/action_scenes/CheckClothes/check_clothes_action.tscn" id="4_j4j6s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4o73"]
@@ -27,8 +28,8 @@ collision_layer = 4
 collision_mask = 0
 monitoring = false
 script = ExtResource("2_vnap7")
-event_key = "wardrobe"
 action_scene_path = ExtResource("4_j4j6s")
+event_info = ExtResource("3_o14om")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
 shape = SubResource("RectangleShape2D_npf5d")

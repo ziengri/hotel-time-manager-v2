@@ -50,13 +50,15 @@ gdscript/warnings/unused_class_variable=true
 
 [display]
 
-window/size/viewport_width=927
-window/size/viewport_height=656
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/behaviour_toolkit/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/behaviour_toolkit/plugin.cfg", "res://addons/godot_resource_groups/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
 
 [global]
 
@@ -155,5 +157,4 @@ move_right={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
 environment/default_environment="res://default_env.tres"

@@ -6,6 +6,6 @@
 script = ExtResource("1_qucph")
 event_key = "wardrobe"
 description = "Постирай вещи"
-time_to_event = 140
+time_to_event = 40
 reward = 12
 is_in_room = true

@@ -6,6 +6,6 @@
 script = ExtResource("1_4c0oi")
 event_key = "tv_repair"
 description = "Почини телевизор"
-time_to_event = 120
+time_to_event = 40
 reward = 12
 is_in_room = true

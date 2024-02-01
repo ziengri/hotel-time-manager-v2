@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3 uid="uid://br40iy2r41t2w"]
+
+[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_85nop"]
+
+[resource]
+script = ExtResource("1_85nop")
+base_folder = "res://scenes/components/event_manager/events/other_events"
+includes = Array[String](["**.tres"])
+excludes = Array[String]([])
+paths = Array[String](["res://scenes/components/event_manager/events/other_events/furnace.tres", "res://scenes/components/event_manager/events/other_events/room_cleaning.tres", "res://scenes/components/event_manager/events/other_events/washing_machine.tres"])

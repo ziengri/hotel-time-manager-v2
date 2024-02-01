@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dapkrmiovwo8b"]
+[gd_scene load_steps=7 format=3 uid="uid://dapkrmiovwo8b"]
 
 [ext_resource type="Script" path="res://scenes/components/event_source/event_source.gd" id="1_6sf01"]
 [ext_resource type="PackedScene" uid="uid://dosp6nurof5x" path="res://scenes/action_scenes/TVRepair/TVReapair_action.tscn" id="2_5fr6a"]
+[ext_resource type="Resource" uid="uid://cswt3n0mctq1i" path="res://scenes/components/event_manager/events/room_events/tv_reapair.tres" id="3_7i0od"]
 [ext_resource type="Texture2D" uid="uid://c21tmee8335mv" path="res://assets/images/tilesets/world/Theme_Sorter_16x16/14_Basement_16x16.png" id="3_v5y4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s53vs"]
@@ -27,8 +28,8 @@ collision_layer = 4
 collision_mask = 0
 monitoring = false
 script = ExtResource("1_6sf01")
-event_key = "tv_repair"
 action_scene_path = ExtResource("2_5fr6a")
+event_info = ExtResource("3_7i0od")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventSource"]
 position = Vector2(0.5, -1.5)

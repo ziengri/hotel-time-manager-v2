@@ -5,27 +5,19 @@ class_name BTRandomSelector extends BTComposite
 
 
 var is_shuffled: bool = false
-var current_leaf: int = 0
+
 
 
 func tick(delta: float, actor: Node, blackboard: Blackboard):
 	if not is_shuffled:
 		leaves.shuffle()
+		is_shuffled = true
 
-	if current_leaf > leaves.size() -1:
-		current_leaf = 0
-		is_shuffled = false
-		return BTStatus.FAILURE
 	
-	var response = leaves[current_leaf].tick(delta, actor, blackboard)
+	var response = leaves[0].tick(delta, actor, blackboard)
 
-	if response == BTStatus.SUCCESS:
-		current_leaf = 0
+	if response == BTStatus.SUCCESS or response == BTStatus.FAILURE:
 		is_shuffled = false
 		return response
 	
-	if response == BTStatus.RUNNING:
-		return response
-	
-	current_leaf += 1
 	return BTStatus.RUNNING

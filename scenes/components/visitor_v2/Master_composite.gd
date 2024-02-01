@@ -13,7 +13,8 @@ func tick(delta: float, actor: Node, blackboard: Blackboard):
 		return response
 	
 	if response == BTStatus.FAILURE:
-		current_leaf = leaves.size() -1
+		print("FAILED ROOM EVENT")
+		current_leaf = leaves.size() -2
 		return BTStatus.RUNNING
 	
 	

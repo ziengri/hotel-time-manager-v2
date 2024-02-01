@@ -4,9 +4,10 @@ extends FSMState
 # Executes after the state is entered.
 func _on_enter(_actor: Node, _blackboard: Blackboard) -> void:
 	var actor = _actor as VisitorCharacter
+	actor.animation_state.travel("Idle")
 	actor.velocity = Vector2.ZERO
 	actor.move_and_slide()
-	print("Вошел в состояние IDLE")
+	# print("Вошел в состояние IDLE")
 
 
 # Executes every _process call, if the state is active.

@@ -3,7 +3,9 @@ extends FSMState
 
 # Executes after the state is entered.
 func _on_enter(_actor: Node, _blackboard: Blackboard) -> void:
-	print("Вошел в состояние WALK")
+	_actor.animation_state.travel("Move")
+
+	# print("Вошел в состояние WALK")
 
 
 # Executes every _process call, if the state is active.
